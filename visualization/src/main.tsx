@@ -14,7 +14,7 @@ function DownloadIcon() {
 }
 
 function GitHubLink() {
-  return <a className="github-link" href="https://github.com/OliverIsOliver/task-specific-mlp-pruning" target="_blank" rel="noreferrer">
+  return <a className="github-link" href="https://github.com/oliveramaher/task-specific-mlp-pruning" target="_blank" rel="noreferrer">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 .75a11.25 11.25 0 0 0-3.558 21.923c.563.104.77-.244.77-.542 0-.268-.01-.978-.015-1.92-3.13.68-3.79-1.51-3.79-1.51-.512-1.3-1.25-1.646-1.25-1.646-1.022-.7.078-.686.078-.686 1.13.08 1.725 1.16 1.725 1.16 1.004 1.722 2.634 1.225 3.277.937.102-.728.393-1.225.714-1.507-2.499-.284-5.126-1.25-5.126-5.565 0-1.23.44-2.234 1.16-3.022-.117-.285-.503-1.43.11-2.98 0 0 .945-.303 3.094 1.154a10.78 10.78 0 0 1 5.624 0c2.148-1.457 3.09-1.154 3.09-1.154.615 1.55.23 2.695.113 2.98.722.788 1.157 1.792 1.157 3.022 0 4.325-2.632 5.278-5.14 5.556.404.35.765 1.042.765 2.1 0 1.516-.014 2.739-.014 3.11 0 .3.203.651.774.54A11.25 11.25 0 0 0 12 .75Z" />
         </svg><span>GitHub</span>

@@ -2,7 +2,7 @@
 
 This project’s goal is to find how many MLP channels can be removed for a task while keeping its accuracy. The Python / PyTorch pipeline ranks neurons by activation × downward sensitivity on a training set, then jointly learns which combination of neurons to keep across all 26 MLP layers for a chosen cut size. It removes the rest and checks performance on a separate testing set.
 
-[Interactive results](https://oliverisoliver.github.io/task-specific-mlp-pruning/)
+[Interactive results](https://oliveramaher.github.io/task-specific-mlp-pruning/)
 
 # Process
 
@@ -89,4 +89,4 @@ npm run dev
 
 `npm run build` produces the static site in `visualization/dist/`. To regenerate the site's cached data from this repository's datasets, masks, and results, run `python visualization/export.py` from the repository root with NumPy installed.
 
-For GitHub Pages, select **Settings → Pages → Source → GitHub Actions**. The included [workflow](.github/workflows/pages.yml) builds and publishes the site on pushes to `main`, or when run manually. The site will be available at `https://oliverisoliver.github.io/task-specific-mlp-pruning/` after deployment.
+For GitHub Pages, select **Settings → Pages → Source → GitHub Actions**. The included [workflow](.github/workflows/pages.yml) builds and publishes the site on pushes to `main`, or when run manually. The site will be available at `https://oliveramaher.github.io/task-specific-mlp-pruning/` after deployment.
