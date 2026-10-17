@@ -6,6 +6,8 @@ This project’s goal is to find how many MLP channels can be removed for a task
 
 # Process
 
+https://github.com/user-attachments/assets/8cc2cf20-38d2-4f8a-88d3-99aea350fe3e
+
 ### 1. Measure how much each neuron affects training loss
 
 For each training example, feed Gemma the prompt and its correct answer. Then compute mean cross-entropy on the answer tokens, and backpropagate to the MLP activations immediately before each layer’s down projection. A **neuron’s activation** tells us its output strength. Its **gradient** tells us how sensitive the loss is to that activation. Multiply them, sum across tokens, square, and average across the training examples:
