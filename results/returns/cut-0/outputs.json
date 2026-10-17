@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "returns-test-035",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-082",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-034",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-030",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-063",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-073",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-044",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-049",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-098",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-027",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-010",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-087",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-031",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-007",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-051",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-077",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-064",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-059",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-094",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-038",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-096",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-054",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-022",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-041",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-012",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-074",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-081",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-078",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-008",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-091",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-001",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-002",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-003",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-004",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-005",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-006",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-009",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-011",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-013",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-014",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-015",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-016",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-017",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-018",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-019",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-020",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-021",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-023",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-024",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-025",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-026",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-028",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-029",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-032",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-033",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-036",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-037",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-039",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-040",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-042",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-043",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-045",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-046",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-047",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-048",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-050",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-052",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-053",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-055",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-056",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-057",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-058",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-060",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-061",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-062",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-065",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-066",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-067",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-068",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-069",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-070",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-071",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-072",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-075",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-076",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-079",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-080",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-083",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-084",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-085",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-086",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-088",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-089",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-090",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-092",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  },
+  {
+    "id": "returns-test-093",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-095",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":false}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-097",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-099",
+    "task": "returns",
+    "response": " {\"eligible\":true}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": true
+  },
+  {
+    "id": "returns-test-100",
+    "task": "returns",
+    "response": " {\"eligible\":false}",
+    "generated_tokens": 5,
+    "truncated": false,
+    "mode": "untouched",
+    "expected": "{\"eligible\":true}",
+    "exact_match": false
+  }
+]

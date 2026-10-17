@@ -1,0 +1,502 @@
+[
+  {
+    "transcript": "My appointment is Tuesday at 11:00 in Maple. Change day to Wednesday and time to 13:00. Undo only the day change.",
+    "answer": "{\"day\":\"Tuesday\",\"time\":\"13:00\",\"room\":\"Maple\"}",
+    "family": "partial_undo",
+    "case_key": "[{\"day\":\"Tuesday\",\"time\":\"11:00\",\"room\":\"Maple\"},[[\"set\",{\"day\":\"Wednesday\",\"time\":\"13:00\"}],[\"undo\",\"day\"]]]",
+    "id": "appointments-train-001",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Tuesday at 11:00 in Maple. Change day to Wednesday and time to 13:00. Undo only the day change.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Monday at 14:00 in Elm. Change room to Birch. Change time to 10:30. Change room to Oak.",
+    "answer": "{\"day\":\"Monday\",\"time\":\"10:30\",\"room\":\"Oak\"}",
+    "family": "successive_edits",
+    "case_key": "[{\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Elm\"},[[\"set\",{\"room\":\"Birch\"}],[\"set\",{\"time\":\"10:30\"}],[\"set\",{\"room\":\"Oak\"}]]]",
+    "id": "appointments-train-002",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Monday at 14:00 in Elm. Change room to Birch. Change time to 10:30. Change room to Oak.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Friday at 14:00 in Pine. Change day to Monday. Change day to Thursday. Undo only the day change.",
+    "answer": "{\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Pine\"}",
+    "family": "undo_last_not_all",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"14:00\",\"room\":\"Pine\"},[[\"set\",{\"day\":\"Monday\"}],[\"set\",{\"day\":\"Thursday\"}],[\"undo\",\"day\"]]]",
+    "id": "appointments-train-003",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Friday at 14:00 in Pine. Change day to Monday. Change day to Thursday. Undo only the day change.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Tuesday at 13:00 in Willow. Change room to Maple and day to Wednesday.",
+    "answer": "{\"day\":\"Wednesday\",\"time\":\"13:00\",\"room\":\"Maple\"}",
+    "family": "two_field_edit",
+    "case_key": "[{\"day\":\"Tuesday\",\"time\":\"13:00\",\"room\":\"Willow\"},[[\"set\",{\"room\":\"Maple\",\"day\":\"Wednesday\"}]]]",
+    "id": "appointments-train-004",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Tuesday at 13:00 in Willow. Change room to Maple and day to Wednesday.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Thursday at 10:00 in Pine. Change day to Tuesday. Change day to Monday. Undo only the day change.",
+    "answer": "{\"day\":\"Tuesday\",\"time\":\"10:00\",\"room\":\"Pine\"}",
+    "family": "undo_last_not_all",
+    "case_key": "[{\"day\":\"Thursday\",\"time\":\"10:00\",\"room\":\"Pine\"},[[\"set\",{\"day\":\"Tuesday\"}],[\"set\",{\"day\":\"Monday\"}],[\"undo\",\"day\"]]]",
+    "id": "appointments-train-005",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Thursday at 10:00 in Pine. Change day to Tuesday. Change day to Monday. Undo only the day change.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Tuesday at 15:30 in Maple. Change day to Monday. Change day to Friday. Undo only the day change.",
+    "answer": "{\"day\":\"Monday\",\"time\":\"15:30\",\"room\":\"Maple\"}",
+    "family": "undo_last_not_all",
+    "case_key": "[{\"day\":\"Tuesday\",\"time\":\"15:30\",\"room\":\"Maple\"},[[\"set\",{\"day\":\"Monday\"}],[\"set\",{\"day\":\"Friday\"}],[\"undo\",\"day\"]]]",
+    "id": "appointments-train-006",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Tuesday at 15:30 in Maple. Change day to Monday. Change day to Friday. Undo only the day change.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Friday at 14:30 in Cedar. Change day to Wednesday and room to Birch.",
+    "answer": "{\"day\":\"Wednesday\",\"time\":\"14:30\",\"room\":\"Birch\"}",
+    "family": "two_field_edit",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"14:30\",\"room\":\"Cedar\"},[[\"set\",{\"day\":\"Wednesday\",\"room\":\"Birch\"}]]]",
+    "id": "appointments-train-007",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Friday at 14:30 in Cedar. Change day to Wednesday and room to Birch.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Friday at 15:30 in Elm. Change time to 09:00. Change room to Willow. Change time to 13:00.",
+    "answer": "{\"day\":\"Friday\",\"time\":\"13:00\",\"room\":\"Willow\"}",
+    "family": "successive_edits",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"15:30\",\"room\":\"Elm\"},[[\"set\",{\"time\":\"09:00\"}],[\"set\",{\"room\":\"Willow\"}],[\"set\",{\"time\":\"13:00\"}]]]",
+    "id": "appointments-train-008",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Friday at 15:30 in Elm. Change time to 09:00. Change room to Willow. Change time to 13:00.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Wednesday at 14:00 in Maple. Change time to 10:00.",
+    "answer": "{\"day\":\"Wednesday\",\"time\":\"10:00\",\"room\":\"Maple\"}",
+    "family": "single_edit",
+    "case_key": "[{\"day\":\"Wednesday\",\"time\":\"14:00\",\"room\":\"Maple\"},[[\"set\",{\"time\":\"10:00\"}]]]",
+    "id": "appointments-train-009",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Wednesday at 14:00 in Maple. Change time to 10:00.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Monday at 14:30 in Elm. Change room to Birch.",
+    "answer": "{\"day\":\"Monday\",\"time\":\"14:30\",\"room\":\"Birch\"}",
+    "family": "single_edit",
+    "case_key": "[{\"day\":\"Monday\",\"time\":\"14:30\",\"room\":\"Elm\"},[[\"set\",{\"room\":\"Birch\"}]]]",
+    "id": "appointments-train-010",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Monday at 14:30 in Elm. Change room to Birch.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Thursday at 14:00 in Maple. Change day to Monday and time to 10:30. Undo only the day change.",
+    "answer": "{\"day\":\"Thursday\",\"time\":\"10:30\",\"room\":\"Maple\"}",
+    "family": "partial_undo",
+    "case_key": "[{\"day\":\"Thursday\",\"time\":\"14:00\",\"room\":\"Maple\"},[[\"set\",{\"day\":\"Monday\",\"time\":\"10:30\"}],[\"undo\",\"day\"]]]",
+    "id": "appointments-train-011",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Thursday at 14:00 in Maple. Change day to Monday and time to 10:30. Undo only the day change.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Thursday at 15:00 in Ash. Suggested: change room to Hazel and day to Friday. Change time to 15:30.",
+    "answer": "{\"day\":\"Thursday\",\"time\":\"15:30\",\"room\":\"Ash\"}",
+    "family": "unapproved_proposal",
+    "case_key": "[{\"day\":\"Thursday\",\"time\":\"15:00\",\"room\":\"Ash\"},[[\"propose\",{\"room\":\"Hazel\",\"day\":\"Friday\"}],[\"set\",{\"time\":\"15:30\"}]]]",
+    "id": "appointments-train-012",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Thursday at 15:00 in Ash. Suggested: change room to Hazel and day to Friday. Change time to 15:30.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Monday at 11:00 in Elm. Change time to 14:30 and room to Willow. Undo only the time change.",
+    "answer": "{\"day\":\"Monday\",\"time\":\"11:00\",\"room\":\"Willow\"}",
+    "family": "partial_undo",
+    "case_key": "[{\"day\":\"Monday\",\"time\":\"11:00\",\"room\":\"Elm\"},[[\"set\",{\"time\":\"14:30\",\"room\":\"Willow\"}],[\"undo\",\"time\"]]]",
+    "id": "appointments-train-013",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Monday at 11:00 in Elm. Change time to 14:30 and room to Willow. Undo only the time change.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Monday at 11:00 in Birch. Change time to 15:30. Change time to 14:30. Undo only the time change.",
+    "answer": "{\"day\":\"Monday\",\"time\":\"15:30\",\"room\":\"Birch\"}",
+    "family": "undo_last_not_all",
+    "case_key": "[{\"day\":\"Monday\",\"time\":\"11:00\",\"room\":\"Birch\"},[[\"set\",{\"time\":\"15:30\"}],[\"set\",{\"time\":\"14:30\"}],[\"undo\",\"time\"]]]",
+    "id": "appointments-train-014",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Monday at 11:00 in Birch. Change time to 15:30. Change time to 14:30. Undo only the time change.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Tuesday at 10:00 in Cedar. Change time to 11:00 and day to Monday.",
+    "answer": "{\"day\":\"Monday\",\"time\":\"11:00\",\"room\":\"Cedar\"}",
+    "family": "two_field_edit",
+    "case_key": "[{\"day\":\"Tuesday\",\"time\":\"10:00\",\"room\":\"Cedar\"},[[\"set\",{\"time\":\"11:00\",\"day\":\"Monday\"}]]]",
+    "id": "appointments-train-015",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Tuesday at 10:00 in Cedar. Change time to 11:00 and day to Monday.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Monday at 13:00 in Cedar. Change room to Elm. Change day to Tuesday. Change room to Ash.",
+    "answer": "{\"day\":\"Tuesday\",\"time\":\"13:00\",\"room\":\"Ash\"}",
+    "family": "successive_edits",
+    "case_key": "[{\"day\":\"Monday\",\"time\":\"13:00\",\"room\":\"Cedar\"},[[\"set\",{\"room\":\"Elm\"}],[\"set\",{\"day\":\"Tuesday\"}],[\"set\",{\"room\":\"Ash\"}]]]",
+    "id": "appointments-train-016",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Monday at 13:00 in Cedar. Change room to Elm. Change day to Tuesday. Change room to Ash.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Thursday at 09:00 in Ash. Change room to Birch and time to 09:30.",
+    "answer": "{\"day\":\"Thursday\",\"time\":\"09:30\",\"room\":\"Birch\"}",
+    "family": "two_field_edit",
+    "case_key": "[{\"day\":\"Thursday\",\"time\":\"09:00\",\"room\":\"Ash\"},[[\"set\",{\"room\":\"Birch\",\"time\":\"09:30\"}]]]",
+    "id": "appointments-train-017",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Thursday at 09:00 in Ash. Change room to Birch and time to 09:30.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Friday at 14:30 in Oak. Suggested: change room to Cedar and day to Monday. Change time to 10:30.",
+    "answer": "{\"day\":\"Friday\",\"time\":\"10:30\",\"room\":\"Oak\"}",
+    "family": "unapproved_proposal",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"14:30\",\"room\":\"Oak\"},[[\"propose\",{\"room\":\"Cedar\",\"day\":\"Monday\"}],[\"set\",{\"time\":\"10:30\"}]]]",
+    "id": "appointments-train-018",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Friday at 14:30 in Oak. Suggested: change room to Cedar and day to Monday. Change time to 10:30.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Tuesday at 14:30 in Pine. Change day to Wednesday and room to Ash. Undo only the day change.",
+    "answer": "{\"day\":\"Tuesday\",\"time\":\"14:30\",\"room\":\"Ash\"}",
+    "family": "partial_undo",
+    "case_key": "[{\"day\":\"Tuesday\",\"time\":\"14:30\",\"room\":\"Pine\"},[[\"set\",{\"day\":\"Wednesday\",\"room\":\"Ash\"}],[\"undo\",\"day\"]]]",
+    "id": "appointments-train-019",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Tuesday at 14:30 in Pine. Change day to Wednesday and room to Ash. Undo only the day change.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Friday at 15:00 in Spruce. Change time to 10:00.",
+    "answer": "{\"day\":\"Friday\",\"time\":\"10:00\",\"room\":\"Spruce\"}",
+    "family": "single_edit",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"15:00\",\"room\":\"Spruce\"},[[\"set\",{\"time\":\"10:00\"}]]]",
+    "id": "appointments-train-020",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Friday at 15:00 in Spruce. Change time to 10:00.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Monday at 14:30 in Cedar. Change time to 15:30. Change day to Tuesday. Change time to 15:00.",
+    "answer": "{\"day\":\"Tuesday\",\"time\":\"15:00\",\"room\":\"Cedar\"}",
+    "family": "successive_edits",
+    "case_key": "[{\"day\":\"Monday\",\"time\":\"14:30\",\"room\":\"Cedar\"},[[\"set\",{\"time\":\"15:30\"}],[\"set\",{\"day\":\"Tuesday\"}],[\"set\",{\"time\":\"15:00\"}]]]",
+    "id": "appointments-train-021",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Monday at 14:30 in Cedar. Change time to 15:30. Change day to Tuesday. Change time to 15:00.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Thursday at 09:30 in Willow. Change day to Wednesday and time to 09:00.",
+    "answer": "{\"day\":\"Wednesday\",\"time\":\"09:00\",\"room\":\"Willow\"}",
+    "family": "two_field_edit",
+    "case_key": "[{\"day\":\"Thursday\",\"time\":\"09:30\",\"room\":\"Willow\"},[[\"set\",{\"day\":\"Wednesday\",\"time\":\"09:00\"}]]]",
+    "id": "appointments-train-022",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Thursday at 09:30 in Willow. Change day to Wednesday and time to 09:00.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Friday at 13:00 in Elm. Change room to Maple. Change room to Willow. Undo only the room change.",
+    "answer": "{\"day\":\"Friday\",\"time\":\"13:00\",\"room\":\"Maple\"}",
+    "family": "undo_last_not_all",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"13:00\",\"room\":\"Elm\"},[[\"set\",{\"room\":\"Maple\"}],[\"set\",{\"room\":\"Willow\"}],[\"undo\",\"room\"]]]",
+    "id": "appointments-train-023",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Friday at 13:00 in Elm. Change room to Maple. Change room to Willow. Undo only the room change.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Friday at 13:00 in Cedar. Suggested: change room to Ash and day to Monday. Change time to 15:30.",
+    "answer": "{\"day\":\"Friday\",\"time\":\"15:30\",\"room\":\"Cedar\"}",
+    "family": "unapproved_proposal",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"13:00\",\"room\":\"Cedar\"},[[\"propose\",{\"room\":\"Ash\",\"day\":\"Monday\"}],[\"set\",{\"time\":\"15:30\"}]]]",
+    "id": "appointments-train-024",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Friday at 13:00 in Cedar. Suggested: change room to Ash and day to Monday. Change time to 15:30.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Tuesday at 15:30 in Ash. Change time to 14:00. Change room to Spruce. Change time to 09:00.",
+    "answer": "{\"day\":\"Tuesday\",\"time\":\"09:00\",\"room\":\"Spruce\"}",
+    "family": "successive_edits",
+    "case_key": "[{\"day\":\"Tuesday\",\"time\":\"15:30\",\"room\":\"Ash\"},[[\"set\",{\"time\":\"14:00\"}],[\"set\",{\"room\":\"Spruce\"}],[\"set\",{\"time\":\"09:00\"}]]]",
+    "id": "appointments-train-025",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Tuesday at 15:30 in Ash. Change time to 14:00. Change room to Spruce. Change time to 09:00.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Thursday at 09:00 in Oak. Change day to Friday and time to 13:00.",
+    "answer": "{\"day\":\"Friday\",\"time\":\"13:00\",\"room\":\"Oak\"}",
+    "family": "two_field_edit",
+    "case_key": "[{\"day\":\"Thursday\",\"time\":\"09:00\",\"room\":\"Oak\"},[[\"set\",{\"day\":\"Friday\",\"time\":\"13:00\"}]]]",
+    "id": "appointments-train-026",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Thursday at 09:00 in Oak. Change day to Friday and time to 13:00.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Monday at 11:00 in Maple. Change day to Friday. Change time to 09:00. Change day to Wednesday.",
+    "answer": "{\"day\":\"Wednesday\",\"time\":\"09:00\",\"room\":\"Maple\"}",
+    "family": "successive_edits",
+    "case_key": "[{\"day\":\"Monday\",\"time\":\"11:00\",\"room\":\"Maple\"},[[\"set\",{\"day\":\"Friday\"}],[\"set\",{\"time\":\"09:00\"}],[\"set\",{\"day\":\"Wednesday\"}]]]",
+    "id": "appointments-train-027",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Monday at 11:00 in Maple. Change day to Friday. Change time to 09:00. Change day to Wednesday.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Friday at 10:30 in Spruce. Change room to Birch. Change day to Wednesday. Change room to Oak.",
+    "answer": "{\"day\":\"Wednesday\",\"time\":\"10:30\",\"room\":\"Oak\"}",
+    "family": "successive_edits",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"10:30\",\"room\":\"Spruce\"},[[\"set\",{\"room\":\"Birch\"}],[\"set\",{\"day\":\"Wednesday\"}],[\"set\",{\"room\":\"Oak\"}]]]",
+    "id": "appointments-train-028",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Friday at 10:30 in Spruce. Change room to Birch. Change day to Wednesday. Change room to Oak.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Tuesday at 13:00 in Pine. Change time to 14:00 and day to Thursday. Undo only the time change.",
+    "answer": "{\"day\":\"Thursday\",\"time\":\"13:00\",\"room\":\"Pine\"}",
+    "family": "partial_undo",
+    "case_key": "[{\"day\":\"Tuesday\",\"time\":\"13:00\",\"room\":\"Pine\"},[[\"set\",{\"time\":\"14:00\",\"day\":\"Thursday\"}],[\"undo\",\"time\"]]]",
+    "id": "appointments-train-029",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Tuesday at 13:00 in Pine. Change time to 14:00 and day to Thursday. Undo only the time change.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Friday at 14:30 in Hazel. Suggested: change day to Thursday and room to Spruce. Change time to 10:30.",
+    "answer": "{\"day\":\"Friday\",\"time\":\"10:30\",\"room\":\"Hazel\"}",
+    "family": "unapproved_proposal",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"14:30\",\"room\":\"Hazel\"},[[\"propose\",{\"day\":\"Thursday\",\"room\":\"Spruce\"}],[\"set\",{\"time\":\"10:30\"}]]]",
+    "id": "appointments-train-030",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Friday at 14:30 in Hazel. Suggested: change day to Thursday and room to Spruce. Change time to 10:30.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Wednesday at 10:00 in Ash. Change day to Monday and time to 11:00. Undo only the day change.",
+    "answer": "{\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Ash\"}",
+    "family": "partial_undo",
+    "case_key": "[{\"day\":\"Wednesday\",\"time\":\"10:00\",\"room\":\"Ash\"},[[\"set\",{\"day\":\"Monday\",\"time\":\"11:00\"}],[\"undo\",\"day\"]]]",
+    "id": "appointments-train-031",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Wednesday at 10:00 in Ash. Change day to Monday and time to 11:00. Undo only the day change.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Friday at 15:00 in Birch. Change room to Spruce.",
+    "answer": "{\"day\":\"Friday\",\"time\":\"15:00\",\"room\":\"Spruce\"}",
+    "family": "single_edit",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"15:00\",\"room\":\"Birch\"},[[\"set\",{\"room\":\"Spruce\"}]]]",
+    "id": "appointments-train-032",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Friday at 15:00 in Birch. Change room to Spruce.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Thursday at 09:00 in Maple. Change room to Cedar and time to 11:00. Undo only the room change.",
+    "answer": "{\"day\":\"Thursday\",\"time\":\"11:00\",\"room\":\"Maple\"}",
+    "family": "partial_undo",
+    "case_key": "[{\"day\":\"Thursday\",\"time\":\"09:00\",\"room\":\"Maple\"},[[\"set\",{\"room\":\"Cedar\",\"time\":\"11:00\"}],[\"undo\",\"room\"]]]",
+    "id": "appointments-train-033",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Thursday at 09:00 in Maple. Change room to Cedar and time to 11:00. Undo only the room change.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Tuesday at 10:30 in Willow. Change room to Spruce and time to 11:00.",
+    "answer": "{\"day\":\"Tuesday\",\"time\":\"11:00\",\"room\":\"Spruce\"}",
+    "family": "two_field_edit",
+    "case_key": "[{\"day\":\"Tuesday\",\"time\":\"10:30\",\"room\":\"Willow\"},[[\"set\",{\"room\":\"Spruce\",\"time\":\"11:00\"}]]]",
+    "id": "appointments-train-034",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Tuesday at 10:30 in Willow. Change room to Spruce and time to 11:00.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Friday at 10:30 in Hazel. Change day to Tuesday.",
+    "answer": "{\"day\":\"Tuesday\",\"time\":\"10:30\",\"room\":\"Hazel\"}",
+    "family": "single_edit",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"10:30\",\"room\":\"Hazel\"},[[\"set\",{\"day\":\"Tuesday\"}]]]",
+    "id": "appointments-train-035",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Friday at 10:30 in Hazel. Change day to Tuesday.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Thursday at 15:30 in Cedar. Change day to Monday. Change day to Tuesday. Undo only the day change.",
+    "answer": "{\"day\":\"Monday\",\"time\":\"15:30\",\"room\":\"Cedar\"}",
+    "family": "undo_last_not_all",
+    "case_key": "[{\"day\":\"Thursday\",\"time\":\"15:30\",\"room\":\"Cedar\"},[[\"set\",{\"day\":\"Monday\"}],[\"set\",{\"day\":\"Tuesday\"}],[\"undo\",\"day\"]]]",
+    "id": "appointments-train-036",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Thursday at 15:30 in Cedar. Change day to Monday. Change day to Tuesday. Undo only the day change.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Tuesday at 15:30 in Oak. Change time to 10:30.",
+    "answer": "{\"day\":\"Tuesday\",\"time\":\"10:30\",\"room\":\"Oak\"}",
+    "family": "single_edit",
+    "case_key": "[{\"day\":\"Tuesday\",\"time\":\"15:30\",\"room\":\"Oak\"},[[\"set\",{\"time\":\"10:30\"}]]]",
+    "id": "appointments-train-037",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Tuesday at 15:30 in Oak. Change time to 10:30.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Wednesday at 15:00 in Willow. Change time to 11:00.",
+    "answer": "{\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Willow\"}",
+    "family": "single_edit",
+    "case_key": "[{\"day\":\"Wednesday\",\"time\":\"15:00\",\"room\":\"Willow\"},[[\"set\",{\"time\":\"11:00\"}]]]",
+    "id": "appointments-train-038",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Wednesday at 15:00 in Willow. Change time to 11:00.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Thursday at 11:00 in Cedar. Change day to Wednesday and time to 14:00. Undo only the day change.",
+    "answer": "{\"day\":\"Thursday\",\"time\":\"14:00\",\"room\":\"Cedar\"}",
+    "family": "partial_undo",
+    "case_key": "[{\"day\":\"Thursday\",\"time\":\"11:00\",\"room\":\"Cedar\"},[[\"set\",{\"day\":\"Wednesday\",\"time\":\"14:00\"}],[\"undo\",\"day\"]]]",
+    "id": "appointments-train-039",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Thursday at 11:00 in Cedar. Change day to Wednesday and time to 14:00. Undo only the day change.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Friday at 15:30 in Willow. Change day to Wednesday. Change day to Monday. Undo only the day change.",
+    "answer": "{\"day\":\"Wednesday\",\"time\":\"15:30\",\"room\":\"Willow\"}",
+    "family": "undo_last_not_all",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"15:30\",\"room\":\"Willow\"},[[\"set\",{\"day\":\"Wednesday\"}],[\"set\",{\"day\":\"Monday\"}],[\"undo\",\"day\"]]]",
+    "id": "appointments-train-040",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Friday at 15:30 in Willow. Change day to Wednesday. Change day to Monday. Undo only the day change.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Friday at 09:00 in Pine. Suggested: change day to Thursday and time to 15:30. Change room to Willow.",
+    "answer": "{\"day\":\"Friday\",\"time\":\"09:00\",\"room\":\"Willow\"}",
+    "family": "unapproved_proposal",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"09:00\",\"room\":\"Pine\"},[[\"propose\",{\"day\":\"Thursday\",\"time\":\"15:30\"}],[\"set\",{\"room\":\"Willow\"}]]]",
+    "id": "appointments-train-041",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Friday at 09:00 in Pine. Suggested: change day to Thursday and time to 15:30. Change room to Willow.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Wednesday at 13:00 in Birch. Change day to Friday and time to 10:00.",
+    "answer": "{\"day\":\"Friday\",\"time\":\"10:00\",\"room\":\"Birch\"}",
+    "family": "two_field_edit",
+    "case_key": "[{\"day\":\"Wednesday\",\"time\":\"13:00\",\"room\":\"Birch\"},[[\"set\",{\"day\":\"Friday\",\"time\":\"10:00\"}]]]",
+    "id": "appointments-train-042",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Wednesday at 13:00 in Birch. Change day to Friday and time to 10:00.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Monday at 09:30 in Elm. Change room to Birch. Change room to Willow. Undo only the room change.",
+    "answer": "{\"day\":\"Monday\",\"time\":\"09:30\",\"room\":\"Birch\"}",
+    "family": "undo_last_not_all",
+    "case_key": "[{\"day\":\"Monday\",\"time\":\"09:30\",\"room\":\"Elm\"},[[\"set\",{\"room\":\"Birch\"}],[\"set\",{\"room\":\"Willow\"}],[\"undo\",\"room\"]]]",
+    "id": "appointments-train-043",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Monday at 09:30 in Elm. Change room to Birch. Change room to Willow. Undo only the room change.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Wednesday at 13:00 in Hazel. Change day to Thursday.",
+    "answer": "{\"day\":\"Thursday\",\"time\":\"13:00\",\"room\":\"Hazel\"}",
+    "family": "single_edit",
+    "case_key": "[{\"day\":\"Wednesday\",\"time\":\"13:00\",\"room\":\"Hazel\"},[[\"set\",{\"day\":\"Thursday\"}]]]",
+    "id": "appointments-train-044",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Wednesday at 13:00 in Hazel. Change day to Thursday.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Friday at 14:00 in Ash. Suggested: change room to Birch and time to 10:00. Change day to Wednesday.",
+    "answer": "{\"day\":\"Wednesday\",\"time\":\"14:00\",\"room\":\"Ash\"}",
+    "family": "unapproved_proposal",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"14:00\",\"room\":\"Ash\"},[[\"propose\",{\"room\":\"Birch\",\"time\":\"10:00\"}],[\"set\",{\"day\":\"Wednesday\"}]]]",
+    "id": "appointments-train-045",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Friday at 14:00 in Ash. Suggested: change room to Birch and time to 10:00. Change day to Wednesday.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Tuesday at 09:00 in Elm. Suggested: change day to Monday and room to Cedar. Change time to 14:30.",
+    "answer": "{\"day\":\"Tuesday\",\"time\":\"14:30\",\"room\":\"Elm\"}",
+    "family": "unapproved_proposal",
+    "case_key": "[{\"day\":\"Tuesday\",\"time\":\"09:00\",\"room\":\"Elm\"},[[\"propose\",{\"day\":\"Monday\",\"room\":\"Cedar\"}],[\"set\",{\"time\":\"14:30\"}]]]",
+    "id": "appointments-train-046",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Tuesday at 09:00 in Elm. Suggested: change day to Monday and room to Cedar. Change time to 14:30.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Friday at 09:30 in Willow. Suggested: change room to Ash and day to Wednesday. Change time to 14:00.",
+    "answer": "{\"day\":\"Friday\",\"time\":\"14:00\",\"room\":\"Willow\"}",
+    "family": "unapproved_proposal",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"},[[\"propose\",{\"room\":\"Ash\",\"day\":\"Wednesday\"}],[\"set\",{\"time\":\"14:00\"}]]]",
+    "id": "appointments-train-047",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Friday at 09:30 in Willow. Suggested: change room to Ash and day to Wednesday. Change time to 14:00.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Tuesday at 10:00 in Ash. Change day to Monday. Change time to 11:00. Change day to Wednesday.",
+    "answer": "{\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Ash\"}",
+    "family": "successive_edits",
+    "case_key": "[{\"day\":\"Tuesday\",\"time\":\"10:00\",\"room\":\"Ash\"},[[\"set\",{\"day\":\"Monday\"}],[\"set\",{\"time\":\"11:00\"}],[\"set\",{\"day\":\"Wednesday\"}]]]",
+    "id": "appointments-train-048",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Tuesday at 10:00 in Ash. Change day to Monday. Change time to 11:00. Change day to Wednesday.\nAnswer:"
+  },
+  {
+    "transcript": "Currently booked: Friday at 09:00 in Hazel. Change time to 09:30.",
+    "answer": "{\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Hazel\"}",
+    "family": "single_edit",
+    "case_key": "[{\"day\":\"Friday\",\"time\":\"09:00\",\"room\":\"Hazel\"},[[\"set\",{\"time\":\"09:30\"}]]]",
+    "id": "appointments-train-049",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: Currently booked: Friday at 09:00 in Hazel. Change time to 09:30.\nAnswer:"
+  },
+  {
+    "transcript": "My appointment is Wednesday at 14:00 in Cedar. Change time to 10:30 and room to Oak.",
+    "answer": "{\"day\":\"Wednesday\",\"time\":\"10:30\",\"room\":\"Oak\"}",
+    "family": "two_field_edit",
+    "case_key": "[{\"day\":\"Wednesday\",\"time\":\"14:00\",\"room\":\"Cedar\"},[[\"set\",{\"time\":\"10:30\",\"room\":\"Oak\"}]]]",
+    "id": "appointments-train-050",
+    "task": "appointments",
+    "suite": "narrow_appointments",
+    "prompt": "Update one existing appointment. Its fields are day, time and room. Apply stated changes in order. Suggestions and proposals are not confirmed and have no effect. Undo reverts only the most recent confirmed change to the named field. Return only a JSON object with keys day, time and room. Preserve the given day and room spelling and use the given 24-hour HH:MM times.\n\nInput: My appointment is Monday at 09:00 in Cedar. Change day to Thursday and time to 14:00. Undo only the day change.\nAnswer: {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Cedar\"}\nInput: My appointment is Wednesday at 10:30 in Oak. Suggested: change day to Friday and room to Pine. Change time to 11:00.\nAnswer: {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}\nInput: My appointment is Friday at 14:30 in Willow. Change time to 09:30. Change time to 11:00. Undo only the time change.\nAnswer: {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}\n\nInput: My appointment is Wednesday at 14:00 in Cedar. Change time to 10:30 and room to Oak.\nAnswer:"
+  }
+]

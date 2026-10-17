@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "addition-test-001",
+    "family": "3_terms",
+    "response": " 37\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "37",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-002",
+    "family": "4_terms",
+    "response": " 62\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "62",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-003",
+    "family": "4_terms",
+    "response": " 30\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "30",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-004",
+    "family": "5_terms",
+    "response": " 75\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "75",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-005",
+    "family": "3_terms",
+    "response": " 31\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "31",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-006",
+    "family": "5_terms",
+    "response": " 33\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "33",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-007",
+    "family": "5_terms",
+    "response": " 50\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "60",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-008",
+    "family": "3_terms",
+    "response": " 32\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "42",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-009",
+    "family": "3_terms",
+    "response": " 22\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "22",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-010",
+    "family": "5_terms",
+    "response": " 49\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "51",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-011",
+    "family": "4_terms",
+    "response": " 53\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "53",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-012",
+    "family": "5_terms",
+    "response": " 56\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "54",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-013",
+    "family": "4_terms",
+    "response": " 51\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "51",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-014",
+    "family": "5_terms",
+    "response": " 74\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "56",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-015",
+    "family": "4_terms",
+    "response": " 30\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "30",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-016",
+    "family": "6_terms",
+    "response": " 42\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "40",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-017",
+    "family": "6_terms",
+    "response": " 41\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "41",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-018",
+    "family": "5_terms",
+    "response": " 63\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "61",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-019",
+    "family": "6_terms",
+    "response": " 66\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "70",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-020",
+    "family": "4_terms",
+    "response": " 47\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "47",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-021",
+    "family": "3_terms",
+    "response": " 31\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "29",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-022",
+    "family": "4_terms",
+    "response": " 39\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "41",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-023",
+    "family": "6_terms",
+    "response": " 51\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "59",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-024",
+    "family": "3_terms",
+    "response": " 26\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "26",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-025",
+    "family": "4_terms",
+    "response": " 20\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "20",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-026",
+    "family": "4_terms",
+    "response": " 52\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "52",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-027",
+    "family": "3_terms",
+    "response": " 47\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "47",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-028",
+    "family": "6_terms",
+    "response": " 71\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "65",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-029",
+    "family": "6_terms",
+    "response": " 53\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "53",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-030",
+    "family": "6_terms",
+    "response": " 49\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "49",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-031",
+    "family": "5_terms",
+    "response": " 53\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "51",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-032",
+    "family": "4_terms",
+    "response": " 31\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "29",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-033",
+    "family": "5_terms",
+    "response": " 30\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "38",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-034",
+    "family": "5_terms",
+    "response": " 63\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "63",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-035",
+    "family": "6_terms",
+    "response": " 51\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "51",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-036",
+    "family": "4_terms",
+    "response": " 27\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "27",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-037",
+    "family": "5_terms",
+    "response": " 63\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "61",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-038",
+    "family": "6_terms",
+    "response": " 36\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "35",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-039",
+    "family": "6_terms",
+    "response": " 60\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "63",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-040",
+    "family": "4_terms",
+    "response": " 32\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "32",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-041",
+    "family": "3_terms",
+    "response": " 38\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "38",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-042",
+    "family": "4_terms",
+    "response": " 37\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "37",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-043",
+    "family": "5_terms",
+    "response": " 39\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "39",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-044",
+    "family": "5_terms",
+    "response": " 58\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "54",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-045",
+    "family": "5_terms",
+    "response": " 56\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "50",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-046",
+    "family": "3_terms",
+    "response": " 22\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "22",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-047",
+    "family": "3_terms",
+    "response": " 58\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "48",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-048",
+    "family": "4_terms",
+    "response": " 35\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "35",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-049",
+    "family": "5_terms",
+    "response": " 53\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "63",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-050",
+    "family": "3_terms",
+    "response": " 54\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "54",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-051",
+    "family": "4_terms",
+    "response": " 30\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "30",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-052",
+    "family": "5_terms",
+    "response": " 53\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "36",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-053",
+    "family": "3_terms",
+    "response": " 38\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "28",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-054",
+    "family": "5_terms",
+    "response": " 39\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "37",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-055",
+    "family": "6_terms",
+    "response": " 56\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "63",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-056",
+    "family": "5_terms",
+    "response": " 50\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "52",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-057",
+    "family": "5_terms",
+    "response": " 58\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "52",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-058",
+    "family": "5_terms",
+    "response": " 61\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "59",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-059",
+    "family": "4_terms",
+    "response": " 24\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "24",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-060",
+    "family": "6_terms",
+    "response": " 48\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "42",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-061",
+    "family": "6_terms",
+    "response": " 53\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "53",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-062",
+    "family": "6_terms",
+    "response": " 60\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "66",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-063",
+    "family": "6_terms",
+    "response": " 58\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "57",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-064",
+    "family": "6_terms",
+    "response": " 55\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "49",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-065",
+    "family": "3_terms",
+    "response": " 23\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "23",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-066",
+    "family": "3_terms",
+    "response": " 41\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "41",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-067",
+    "family": "3_terms",
+    "response": " 37\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "37",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-068",
+    "family": "4_terms",
+    "response": " 40\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "38",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-069",
+    "family": "4_terms",
+    "response": " 24\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "24",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-070",
+    "family": "3_terms",
+    "response": " 32\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "32",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-071",
+    "family": "6_terms",
+    "response": " 59\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "64",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-072",
+    "family": "4_terms",
+    "response": " 39\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "37",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-073",
+    "family": "4_terms",
+    "response": " 57\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "47",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-074",
+    "family": "3_terms",
+    "response": " 42\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "42",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-075",
+    "family": "6_terms",
+    "response": " 48\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "49",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-076",
+    "family": "4_terms",
+    "response": " 46\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "46",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-077",
+    "family": "3_terms",
+    "response": " 39\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "29",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-078",
+    "family": "5_terms",
+    "response": " 67\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "69",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-079",
+    "family": "3_terms",
+    "response": " 27\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "27",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-080",
+    "family": "3_terms",
+    "response": " 35\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "35",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-081",
+    "family": "3_terms",
+    "response": " 22\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "22",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-082",
+    "family": "5_terms",
+    "response": " 49\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "49",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-083",
+    "family": "5_terms",
+    "response": " 59\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "59",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-084",
+    "family": "6_terms",
+    "response": " 41\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "50",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-085",
+    "family": "6_terms",
+    "response": " 72\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "78",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-086",
+    "family": "5_terms",
+    "response": " 43\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "51",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-087",
+    "family": "3_terms",
+    "response": " 40\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "50",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-088",
+    "family": "3_terms",
+    "response": " 35\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "35",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-089",
+    "family": "6_terms",
+    "response": " 65\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "65",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-090",
+    "family": "4_terms",
+    "response": " 46\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "46",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-091",
+    "family": "6_terms",
+    "response": " 63\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "63",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-092",
+    "family": "6_terms",
+    "response": " 60\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "61",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-093",
+    "family": "4_terms",
+    "response": " 40\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "40",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-094",
+    "family": "4_terms",
+    "response": " 31\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "31",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-095",
+    "family": "5_terms",
+    "response": " 47\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "49",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-096",
+    "family": "3_terms",
+    "response": " 36\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "36",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-097",
+    "family": "6_terms",
+    "response": " 49\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "47",
+    "exact_match": false
+  },
+  {
+    "id": "addition-test-098",
+    "family": "4_terms",
+    "response": " 52\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "52",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-099",
+    "family": "3_terms",
+    "response": " 17\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "17",
+    "exact_match": true
+  },
+  {
+    "id": "addition-test-100",
+    "family": "6_terms",
+    "response": " 79\n\n",
+    "generated_tokens": 4,
+    "truncated": false,
+    "mode": "joint_20",
+    "expected": "91",
+    "exact_match": false
+  }
+]

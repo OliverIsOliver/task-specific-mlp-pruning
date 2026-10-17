@@ -1,0 +1,852 @@
+[
+  {
+    "id": "matched-train-047",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with 3 muffins and 5 croissants. Then add 1 more muffin and 2 more croissants to that same order. Finally change the muffin total to 5 instead of the accumulated amount.",
+    "parameters": {
+      "a": "muffin",
+      "b": "croissant",
+      "a0": 3,
+      "b0": 5,
+      "a1": 5,
+      "ax": 1,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with 3 muffins and 5 croissants. Then add 1 more muffin and 2 more croissants to that same order. Finally change the muffin total to 5 instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"muffin\",\"quantity\":5},{\"food\":\"croissant\",\"quantity\":7}]"
+  },
+  {
+    "id": "matched-train-031",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like 2 burgers and 3 coffees. Next add 1 burger and 3 coffees to the order. At the end make it 5 burgers in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "burger",
+      "b": "coffee",
+      "a0": 2,
+      "b0": 3,
+      "a1": 5,
+      "ax": 1,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like 2 burgers and 3 coffees. Next add 1 burger and 3 coffees to the order. At the end make it 5 burgers in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"burger\",\"quantity\":5},{\"food\":\"coffee\",\"quantity\":6}]"
+  },
+  {
+    "id": "matched-train-039",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like 6 soups and 5 pizzas. Next add 3 soups and 3 pizzas to the order. At the end make it 3 soups in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "soup",
+      "b": "pizza",
+      "a0": 6,
+      "b0": 5,
+      "a1": 3,
+      "ax": 3,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like 6 soups and 5 pizzas. Next add 3 soups and 3 pizzas to the order. At the end make it 3 soups in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":8}]"
+  },
+  {
+    "id": "matched-train-026",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with three bagels and five soups. Then add three more bagels and one more soup to that same order. Finally change the bagel total to two instead of the accumulated amount.",
+    "parameters": {
+      "a": "bagel",
+      "b": "soup",
+      "a0": 3,
+      "b0": 5,
+      "a1": 2,
+      "ax": 3,
+      "bx": 1
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with three bagels and five soups. Then add three more bagels and one more soup to that same order. Finally change the bagel total to two instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"bagel\",\"quantity\":2},{\"food\":\"soup\",\"quantity\":6}]"
+  },
+  {
+    "id": "matched-train-046",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with four bagels and seven soups. Then add one more bagel and one more soup to that same order. Finally change the bagel total to seven instead of the accumulated amount.",
+    "parameters": {
+      "a": "bagel",
+      "b": "soup",
+      "a0": 4,
+      "b0": 7,
+      "a1": 7,
+      "ax": 1,
+      "bx": 1
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with four bagels and seven soups. Then add one more bagel and one more soup to that same order. Finally change the bagel total to seven instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"bagel\",\"quantity\":7},{\"food\":\"soup\",\"quantity\":8}]"
+  },
+  {
+    "id": "matched-train-038",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like four salads and two burgers. Next add three salads and two burgers to the order. At the end make it six salads in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "salad",
+      "b": "burger",
+      "a0": 4,
+      "b0": 2,
+      "a1": 6,
+      "ax": 3,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like four salads and two burgers. Next add three salads and two burgers to the order. At the end make it six salads in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"salad\",\"quantity\":6},{\"food\":\"burger\",\"quantity\":4}]"
+  },
+  {
+    "id": "matched-train-017",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like 5 muffins and 7 croissants. Next add 2 muffins and 3 croissants to the order. At the end make it 3 muffins in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "muffin",
+      "b": "croissant",
+      "a0": 5,
+      "b0": 7,
+      "a1": 3,
+      "ax": 2,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like 5 muffins and 7 croissants. Next add 2 muffins and 3 croissants to the order. At the end make it 3 muffins in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"muffin\",\"quantity\":3},{\"food\":\"croissant\",\"quantity\":10}]"
+  },
+  {
+    "id": "matched-train-008",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with two salads and six burgers. Then add two more salads and two more burgers to that same order. Finally change the salad total to seven instead of the accumulated amount.",
+    "parameters": {
+      "a": "salad",
+      "b": "burger",
+      "a0": 2,
+      "b0": 6,
+      "a1": 7,
+      "ax": 2,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with two salads and six burgers. Then add two more salads and two more burgers to that same order. Finally change the salad total to seven instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"salad\",\"quantity\":7},{\"food\":\"burger\",\"quantity\":8}]"
+  },
+  {
+    "id": "matched-train-044",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with seven coffees and three muffins. Then add two more coffees and one more muffin to that same order. Finally change the coffee total to three instead of the accumulated amount.",
+    "parameters": {
+      "a": "coffee",
+      "b": "muffin",
+      "a0": 7,
+      "b0": 3,
+      "a1": 3,
+      "ax": 2,
+      "bx": 1
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with seven coffees and three muffins. Then add two more coffees and one more muffin to that same order. Finally change the coffee total to three instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"coffee\",\"quantity\":3},{\"food\":\"muffin\",\"quantity\":4}]"
+  },
+  {
+    "id": "matched-train-009",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with 7 soups and 4 pizzas. Then add 1 more soup and 2 more pizzas to that same order. Finally change the soup total to 3 instead of the accumulated amount.",
+    "parameters": {
+      "a": "soup",
+      "b": "pizza",
+      "a0": 7,
+      "b0": 4,
+      "a1": 3,
+      "ax": 1,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with 7 soups and 4 pizzas. Then add 1 more soup and 2 more pizzas to that same order. Finally change the soup total to 3 instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":6}]"
+  },
+  {
+    "id": "matched-train-042",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with seven pizzas and six teas. Then add one more pizza and one more tea to that same order. Finally change the pizza total to five instead of the accumulated amount.",
+    "parameters": {
+      "a": "pizza",
+      "b": "tea",
+      "a0": 7,
+      "b0": 6,
+      "a1": 5,
+      "ax": 1,
+      "bx": 1
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with seven pizzas and six teas. Then add one more pizza and one more tea to that same order. Finally change the pizza total to five instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"pizza\",\"quantity\":5},{\"food\":\"tea\",\"quantity\":7}]"
+  },
+  {
+    "id": "matched-train-018",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like seven salads and five burgers. Next add three salads and three burgers to the order. At the end make it four salads in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "salad",
+      "b": "burger",
+      "a0": 7,
+      "b0": 5,
+      "a1": 4,
+      "ax": 3,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like seven salads and five burgers. Next add three salads and three burgers to the order. At the end make it four salads in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"salad\",\"quantity\":4},{\"food\":\"burger\",\"quantity\":8}]"
+  },
+  {
+    "id": "matched-train-029",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with 6 soups and 5 pizzas. Then add 3 more soups and 2 more pizzas to that same order. Finally change the soup total to 4 instead of the accumulated amount.",
+    "parameters": {
+      "a": "soup",
+      "b": "pizza",
+      "a0": 6,
+      "b0": 5,
+      "a1": 4,
+      "ax": 3,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with 6 soups and 5 pizzas. Then add 3 more soups and 2 more pizzas to that same order. Finally change the soup total to 4 instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"soup\",\"quantity\":4},{\"food\":\"pizza\",\"quantity\":7}]"
+  },
+  {
+    "id": "matched-train-015",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like 6 teas and 3 salads. Next add 1 tea and 1 salad to the order. At the end make it 5 teas in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "tea",
+      "b": "salad",
+      "a0": 6,
+      "b0": 3,
+      "a1": 5,
+      "ax": 1,
+      "bx": 1
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like 6 teas and 3 salads. Next add 1 tea and 1 salad to the order. At the end make it 5 teas in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"tea\",\"quantity\":5},{\"food\":\"salad\",\"quantity\":4}]"
+  },
+  {
+    "id": "matched-train-025",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with 5 teas and 3 salads. Then add 3 more teas and 2 more salads to that same order. Finally change the tea total to 7 instead of the accumulated amount.",
+    "parameters": {
+      "a": "tea",
+      "b": "salad",
+      "a0": 5,
+      "b0": 3,
+      "a1": 7,
+      "ax": 3,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with 5 teas and 3 salads. Then add 3 more teas and 2 more salads to that same order. Finally change the tea total to 7 instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"tea\",\"quantity\":7},{\"food\":\"salad\",\"quantity\":5}]"
+  },
+  {
+    "id": "matched-train-010",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with seven croissants and three tacos. Then add two more croissants and one more taco to that same order. Finally change the croissant total to five instead of the accumulated amount.",
+    "parameters": {
+      "a": "croissant",
+      "b": "taco",
+      "a0": 7,
+      "b0": 3,
+      "a1": 5,
+      "ax": 2,
+      "bx": 1
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with seven croissants and three tacos. Then add two more croissants and one more taco to that same order. Finally change the croissant total to five instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"croissant\",\"quantity\":5},{\"food\":\"taco\",\"quantity\":4}]"
+  },
+  {
+    "id": "matched-train-040",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like seven croissants and six tacos. Next add three croissants and three tacos to the order. At the end make it four croissants in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "croissant",
+      "b": "taco",
+      "a0": 7,
+      "b0": 6,
+      "a1": 4,
+      "ax": 3,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like seven croissants and six tacos. Next add three croissants and three tacos to the order. At the end make it four croissants in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"croissant\",\"quantity\":4},{\"food\":\"taco\",\"quantity\":9}]"
+  },
+  {
+    "id": "matched-train-021",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with 5 burgers and 3 coffees. Then add 3 more burgers and 3 more coffees to that same order. Finally change the burger total to 3 instead of the accumulated amount.",
+    "parameters": {
+      "a": "burger",
+      "b": "coffee",
+      "a0": 5,
+      "b0": 3,
+      "a1": 3,
+      "ax": 3,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with 5 burgers and 3 coffees. Then add 3 more burgers and 3 more coffees to that same order. Finally change the burger total to 3 instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"burger\",\"quantity\":3},{\"food\":\"coffee\",\"quantity\":6}]"
+  },
+  {
+    "id": "matched-train-048",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with four salads and four burgers. Then add two more salads and one more burger to that same order. Finally change the salad total to seven instead of the accumulated amount.",
+    "parameters": {
+      "a": "salad",
+      "b": "burger",
+      "a0": 4,
+      "b0": 4,
+      "a1": 7,
+      "ax": 2,
+      "bx": 1
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with four salads and four burgers. Then add two more salads and one more burger to that same order. Finally change the salad total to seven instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"salad\",\"quantity\":7},{\"food\":\"burger\",\"quantity\":5}]"
+  },
+  {
+    "id": "matched-train-023",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with 4 tacos and 6 bagels. Then add 1 more taco and 1 more bagel to that same order. Finally change the taco total to 6 instead of the accumulated amount.",
+    "parameters": {
+      "a": "taco",
+      "b": "bagel",
+      "a0": 4,
+      "b0": 6,
+      "a1": 6,
+      "ax": 1,
+      "bx": 1
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with 4 tacos and 6 bagels. Then add 1 more taco and 1 more bagel to that same order. Finally change the taco total to 6 instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"taco\",\"quantity\":6},{\"food\":\"bagel\",\"quantity\":7}]"
+  },
+  {
+    "id": "matched-train-050",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with six croissants and five tacos. Then add three more croissants and two more tacos to that same order. Finally change the croissant total to two instead of the accumulated amount.",
+    "parameters": {
+      "a": "croissant",
+      "b": "taco",
+      "a0": 6,
+      "b0": 5,
+      "a1": 2,
+      "ax": 3,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with six croissants and five tacos. Then add three more croissants and two more tacos to that same order. Finally change the croissant total to two instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"croissant\",\"quantity\":2},{\"food\":\"taco\",\"quantity\":7}]"
+  },
+  {
+    "id": "matched-train-005",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with 3 teas and 3 salads. Then add 3 more teas and 2 more salads to that same order. Finally change the tea total to 4 instead of the accumulated amount.",
+    "parameters": {
+      "a": "tea",
+      "b": "salad",
+      "a0": 3,
+      "b0": 3,
+      "a1": 4,
+      "ax": 3,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with 3 teas and 3 salads. Then add 3 more teas and 2 more salads to that same order. Finally change the tea total to 4 instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"tea\",\"quantity\":4},{\"food\":\"salad\",\"quantity\":5}]"
+  },
+  {
+    "id": "matched-train-027",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with 3 muffins and 3 croissants. Then add 1 more muffin and 2 more croissants to that same order. Finally change the muffin total to 6 instead of the accumulated amount.",
+    "parameters": {
+      "a": "muffin",
+      "b": "croissant",
+      "a0": 3,
+      "b0": 3,
+      "a1": 6,
+      "ax": 1,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with 3 muffins and 3 croissants. Then add 1 more muffin and 2 more croissants to that same order. Finally change the muffin total to 6 instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"muffin\",\"quantity\":6},{\"food\":\"croissant\",\"quantity\":5}]"
+  },
+  {
+    "id": "matched-train-013",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like 5 tacos and 6 bagels. Next add 3 tacos and 2 bagels to the order. At the end make it 7 tacos in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "taco",
+      "b": "bagel",
+      "a0": 5,
+      "b0": 6,
+      "a1": 7,
+      "ax": 3,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like 5 tacos and 6 bagels. Next add 3 tacos and 2 bagels to the order. At the end make it 7 tacos in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"taco\",\"quantity\":7},{\"food\":\"bagel\",\"quantity\":8}]"
+  },
+  {
+    "id": "matched-train-016",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like five bagels and four soups. Next add two bagels and three soups to the order. At the end make it three bagels in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "bagel",
+      "b": "soup",
+      "a0": 5,
+      "b0": 4,
+      "a1": 3,
+      "ax": 2,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like five bagels and four soups. Next add two bagels and three soups to the order. At the end make it three bagels in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"bagel\",\"quantity\":3},{\"food\":\"soup\",\"quantity\":7}]"
+  },
+  {
+    "id": "matched-train-033",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like 5 tacos and 2 bagels. Next add 3 tacos and 1 bagel to the order. At the end make it 2 tacos in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "taco",
+      "b": "bagel",
+      "a0": 5,
+      "b0": 2,
+      "a1": 2,
+      "ax": 3,
+      "bx": 1
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like 5 tacos and 2 bagels. Next add 3 tacos and 1 bagel to the order. At the end make it 2 tacos in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":3}]"
+  },
+  {
+    "id": "matched-train-002",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with six pizzas and six teas. Then add two more pizzas and three more teas to that same order. Finally change the pizza total to three instead of the accumulated amount.",
+    "parameters": {
+      "a": "pizza",
+      "b": "tea",
+      "a0": 6,
+      "b0": 6,
+      "a1": 3,
+      "ax": 2,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with six pizzas and six teas. Then add two more pizzas and three more teas to that same order. Finally change the pizza total to three instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"pizza\",\"quantity\":3},{\"food\":\"tea\",\"quantity\":9}]"
+  },
+  {
+    "id": "matched-train-014",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like three coffees and six muffins. Next add two coffees and three muffins to the order. At the end make it two coffees in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "coffee",
+      "b": "muffin",
+      "a0": 3,
+      "b0": 6,
+      "a1": 2,
+      "ax": 2,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like three coffees and six muffins. Next add two coffees and three muffins to the order. At the end make it two coffees in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"coffee\",\"quantity\":2},{\"food\":\"muffin\",\"quantity\":9}]"
+  },
+  {
+    "id": "matched-train-043",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with 2 tacos and 2 bagels. Then add 2 more tacos and 3 more bagels to that same order. Finally change the taco total to 7 instead of the accumulated amount.",
+    "parameters": {
+      "a": "taco",
+      "b": "bagel",
+      "a0": 2,
+      "b0": 2,
+      "a1": 7,
+      "ax": 2,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with 2 tacos and 2 bagels. Then add 2 more tacos and 3 more bagels to that same order. Finally change the taco total to 7 instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"taco\",\"quantity\":7},{\"food\":\"bagel\",\"quantity\":5}]"
+  },
+  {
+    "id": "matched-train-030",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with five croissants and three tacos. Then add two more croissants and two more tacos to that same order. Finally change the croissant total to three instead of the accumulated amount.",
+    "parameters": {
+      "a": "croissant",
+      "b": "taco",
+      "a0": 5,
+      "b0": 3,
+      "a1": 3,
+      "ax": 2,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with five croissants and three tacos. Then add two more croissants and two more tacos to that same order. Finally change the croissant total to three instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"croissant\",\"quantity\":3},{\"food\":\"taco\",\"quantity\":5}]"
+  },
+  {
+    "id": "matched-train-019",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like 5 soups and 6 pizzas. Next add 1 soup and 1 pizza to the order. At the end make it 7 soups in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "soup",
+      "b": "pizza",
+      "a0": 5,
+      "b0": 6,
+      "a1": 7,
+      "ax": 1,
+      "bx": 1
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like 5 soups and 6 pizzas. Next add 1 soup and 1 pizza to the order. At the end make it 7 soups in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"soup\",\"quantity\":7},{\"food\":\"pizza\",\"quantity\":7}]"
+  },
+  {
+    "id": "matched-train-041",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with 7 burgers and 6 coffees. Then add 1 more burger and 2 more coffees to that same order. Finally change the burger total to 4 instead of the accumulated amount.",
+    "parameters": {
+      "a": "burger",
+      "b": "coffee",
+      "a0": 7,
+      "b0": 6,
+      "a1": 4,
+      "ax": 1,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with 7 burgers and 6 coffees. Then add 1 more burger and 2 more coffees to that same order. Finally change the burger total to 4 instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":8}]"
+  },
+  {
+    "id": "matched-train-024",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with seven coffees and four muffins. Then add three more coffees and three more muffins to that same order. Finally change the coffee total to six instead of the accumulated amount.",
+    "parameters": {
+      "a": "coffee",
+      "b": "muffin",
+      "a0": 7,
+      "b0": 4,
+      "a1": 6,
+      "ax": 3,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with seven coffees and four muffins. Then add three more coffees and three more muffins to that same order. Finally change the coffee total to six instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"coffee\",\"quantity\":6},{\"food\":\"muffin\",\"quantity\":7}]"
+  },
+  {
+    "id": "matched-train-001",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with 6 burgers and 3 coffees. Then add 3 more burgers and 1 more coffee to that same order. Finally change the burger total to 4 instead of the accumulated amount.",
+    "parameters": {
+      "a": "burger",
+      "b": "coffee",
+      "a0": 6,
+      "b0": 3,
+      "a1": 4,
+      "ax": 3,
+      "bx": 1
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with 6 burgers and 3 coffees. Then add 3 more burgers and 1 more coffee to that same order. Finally change the burger total to 4 instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":4}]"
+  },
+  {
+    "id": "matched-train-003",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with 2 tacos and 7 bagels. Then add 1 more taco and 3 more bagels to that same order. Finally change the taco total to 6 instead of the accumulated amount.",
+    "parameters": {
+      "a": "taco",
+      "b": "bagel",
+      "a0": 2,
+      "b0": 7,
+      "a1": 6,
+      "ax": 1,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with 2 tacos and 7 bagels. Then add 1 more taco and 3 more bagels to that same order. Finally change the taco total to 6 instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"taco\",\"quantity\":6},{\"food\":\"bagel\",\"quantity\":10}]"
+  },
+  {
+    "id": "matched-train-006",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with seven bagels and two soups. Then add two more bagels and two more soups to that same order. Finally change the bagel total to four instead of the accumulated amount.",
+    "parameters": {
+      "a": "bagel",
+      "b": "soup",
+      "a0": 7,
+      "b0": 2,
+      "a1": 4,
+      "ax": 2,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with seven bagels and two soups. Then add two more bagels and two more soups to that same order. Finally change the bagel total to four instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"bagel\",\"quantity\":4},{\"food\":\"soup\",\"quantity\":4}]"
+  },
+  {
+    "id": "matched-train-020",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like five croissants and six tacos. Next add three croissants and two tacos to the order. At the end make it two croissants in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "croissant",
+      "b": "taco",
+      "a0": 5,
+      "b0": 6,
+      "a1": 2,
+      "ax": 3,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like five croissants and six tacos. Next add three croissants and two tacos to the order. At the end make it two croissants in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"croissant\",\"quantity\":2},{\"food\":\"taco\",\"quantity\":8}]"
+  },
+  {
+    "id": "matched-train-007",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with 7 muffins and 3 croissants. Then add 3 more muffins and 1 more croissant to that same order. Finally change the muffin total to 3 instead of the accumulated amount.",
+    "parameters": {
+      "a": "muffin",
+      "b": "croissant",
+      "a0": 7,
+      "b0": 3,
+      "a1": 3,
+      "ax": 3,
+      "bx": 1
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with 7 muffins and 3 croissants. Then add 3 more muffins and 1 more croissant to that same order. Finally change the muffin total to 3 instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"muffin\",\"quantity\":3},{\"food\":\"croissant\",\"quantity\":4}]"
+  },
+  {
+    "id": "matched-train-004",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with seven coffees and four muffins. Then add one more coffee and two more muffins to that same order. Finally change the coffee total to four instead of the accumulated amount.",
+    "parameters": {
+      "a": "coffee",
+      "b": "muffin",
+      "a0": 7,
+      "b0": 4,
+      "a1": 4,
+      "ax": 1,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with seven coffees and four muffins. Then add one more coffee and two more muffins to that same order. Finally change the coffee total to four instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"coffee\",\"quantity\":4},{\"food\":\"muffin\",\"quantity\":6}]"
+  },
+  {
+    "id": "matched-train-037",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like 2 muffins and 2 croissants. Next add 1 muffin and 3 croissants to the order. At the end make it 7 muffins in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "muffin",
+      "b": "croissant",
+      "a0": 2,
+      "b0": 2,
+      "a1": 7,
+      "ax": 1,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like 2 muffins and 2 croissants. Next add 1 muffin and 3 croissants to the order. At the end make it 7 muffins in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"muffin\",\"quantity\":7},{\"food\":\"croissant\",\"quantity\":5}]"
+  },
+  {
+    "id": "matched-train-012",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like six pizzas and seven teas. Next add two pizzas and two teas to the order. At the end make it five pizzas in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "pizza",
+      "b": "tea",
+      "a0": 6,
+      "b0": 7,
+      "a1": 5,
+      "ax": 2,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like six pizzas and seven teas. Next add two pizzas and two teas to the order. At the end make it five pizzas in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"pizza\",\"quantity\":5},{\"food\":\"tea\",\"quantity\":9}]"
+  },
+  {
+    "id": "matched-train-045",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with 4 teas and 3 salads. Then add 2 more teas and 2 more salads to that same order. Finally change the tea total to 7 instead of the accumulated amount.",
+    "parameters": {
+      "a": "tea",
+      "b": "salad",
+      "a0": 4,
+      "b0": 3,
+      "a1": 7,
+      "ax": 2,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with 4 teas and 3 salads. Then add 2 more teas and 2 more salads to that same order. Finally change the tea total to 7 instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"tea\",\"quantity\":7},{\"food\":\"salad\",\"quantity\":5}]"
+  },
+  {
+    "id": "matched-train-022",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with four pizzas and four teas. Then add three more pizzas and one more tea to that same order. Finally change the pizza total to two instead of the accumulated amount.",
+    "parameters": {
+      "a": "pizza",
+      "b": "tea",
+      "a0": 4,
+      "b0": 4,
+      "a1": 2,
+      "ax": 3,
+      "bx": 1
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with four pizzas and four teas. Then add three more pizzas and one more tea to that same order. Finally change the pizza total to two instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"pizza\",\"quantity\":2},{\"food\":\"tea\",\"quantity\":5}]"
+  },
+  {
+    "id": "matched-train-035",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like 7 teas and 4 salads. Next add 3 teas and 2 salads to the order. At the end make it 3 teas in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "tea",
+      "b": "salad",
+      "a0": 7,
+      "b0": 4,
+      "a1": 3,
+      "ax": 3,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like 7 teas and 4 salads. Next add 3 teas and 2 salads to the order. At the end make it 3 teas in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"tea\",\"quantity\":3},{\"food\":\"salad\",\"quantity\":6}]"
+  },
+  {
+    "id": "matched-train-032",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like three pizzas and five teas. Next add two pizzas and three teas to the order. At the end make it six pizzas in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "pizza",
+      "b": "tea",
+      "a0": 3,
+      "b0": 5,
+      "a1": 6,
+      "ax": 2,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like three pizzas and five teas. Next add two pizzas and three teas to the order. At the end make it six pizzas in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"pizza\",\"quantity\":6},{\"food\":\"tea\",\"quantity\":8}]"
+  },
+  {
+    "id": "matched-train-049",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with 7 soups and 2 pizzas. Then add 1 more soup and 3 more pizzas to that same order. Finally change the soup total to 2 instead of the accumulated amount.",
+    "parameters": {
+      "a": "soup",
+      "b": "pizza",
+      "a0": 7,
+      "b0": 2,
+      "a1": 2,
+      "ax": 1,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with 7 soups and 2 pizzas. Then add 1 more soup and 3 more pizzas to that same order. Finally change the soup total to 2 instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"soup\",\"quantity\":2},{\"food\":\"pizza\",\"quantity\":5}]"
+  },
+  {
+    "id": "matched-train-034",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like four coffees and two muffins. Next add three coffees and two muffins to the order. At the end make it six coffees in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "coffee",
+      "b": "muffin",
+      "a0": 4,
+      "b0": 2,
+      "a1": 6,
+      "ax": 3,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like four coffees and two muffins. Next add three coffees and two muffins to the order. At the end make it six coffees in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"coffee\",\"quantity\":6},{\"food\":\"muffin\",\"quantity\":4}]"
+  },
+  {
+    "id": "matched-train-028",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "Start with five salads and four burgers. Then add three more salads and two more burgers to that same order. Finally change the salad total to seven instead of the accumulated amount.",
+    "parameters": {
+      "a": "salad",
+      "b": "burger",
+      "a0": 5,
+      "b0": 4,
+      "a1": 7,
+      "ax": 3,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: Start with five salads and four burgers. Then add three more salads and two more burgers to that same order. Finally change the salad total to seven instead of the accumulated amount.\nAnswer:",
+    "answer": "[{\"food\":\"salad\",\"quantity\":7},{\"food\":\"burger\",\"quantity\":6}]"
+  },
+  {
+    "id": "matched-train-011",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like 5 burgers and 4 coffees. Next add 3 burgers and 2 coffees to the order. At the end make it 2 burgers in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "burger",
+      "b": "coffee",
+      "a0": 5,
+      "b0": 4,
+      "a1": 2,
+      "ax": 3,
+      "bx": 2
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like 5 burgers and 4 coffees. Next add 3 burgers and 2 coffees to the order. At the end make it 2 burgers in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"burger\",\"quantity\":2},{\"food\":\"coffee\",\"quantity\":6}]"
+  },
+  {
+    "id": "matched-train-036",
+    "task": "food",
+    "suite": "two_item_corrections",
+    "transcript": "I'd like six bagels and three soups. Next add three bagels and three soups to the order. At the end make it three bagels in total, replacing the earlier amount.",
+    "parameters": {
+      "a": "bagel",
+      "b": "soup",
+      "a0": 6,
+      "b0": 3,
+      "a1": 3,
+      "ax": 3,
+      "bx": 3
+    },
+    "prompt": "Extract the final food order. Process changes in order. A corrected total replaces that food's old quantity. Later additions increase its corrected quantity. Combine each food into exactly one object. Return only a JSON array with singular food names and integer quantities, using keys food and quantity.\n\nTranscript: Start with two burgers and three coffees. Then add one more burger and two more coffees to that same order. Finally change the burger total to four instead of the accumulated amount.\nAnswer: [{\"food\":\"burger\",\"quantity\":4},{\"food\":\"coffee\",\"quantity\":5}]\nTranscript: I'd like five tacos and three bagels. Next add two tacos and one bagel to the order. At the end make it two tacos in total, replacing the earlier amount.\nAnswer: [{\"food\":\"taco\",\"quantity\":2},{\"food\":\"bagel\",\"quantity\":4}]\nTranscript: Start with six soups and two pizzas. Then add one more soup and two more pizzas to that same order. Finally change the soup total to three instead of the accumulated amount.\nAnswer: [{\"food\":\"soup\",\"quantity\":3},{\"food\":\"pizza\",\"quantity\":4}]\n\nTranscript: I'd like six bagels and three soups. Next add three bagels and three soups to the order. At the end make it three bagels in total, replacing the earlier amount.\nAnswer:",
+    "answer": "[{\"food\":\"bagel\",\"quantity\":3},{\"food\":\"soup\",\"quantity\":6}]"
+  }
+]

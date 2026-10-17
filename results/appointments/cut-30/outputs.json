@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "appointments-test-001",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"10:00\",\"room\":\"Hazel\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"10:00\",\"room\":\"Hazel\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-002",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Spruce\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-003",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"15:30\",\"room\":\"Elm\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"15:30\",\"room\":\"Hazel\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-004",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"09:30\",\"room\":\"Ash\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"09:30\",\"room\":\"Ash\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-005",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"09:30\",\"room\":\"Oak\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"09:30\",\"room\":\"Oak\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-006",
+    "task": "appointments",
+    "response": " {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-007",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"11:00\",\"room\":\"Willow\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"11:00\",\"room\":\"Willow\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-008",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"15:30\",\"room\":\"Elm\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"15:30\",\"room\":\"Birch\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-009",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"15:30\",\"room\":\"Oak\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"15:30\",\"room\":\"Oak\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-010",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"15:30\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"14:00\",\"room\":\"Elm\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-011",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"10:30\",\"room\":\"Maple\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"10:30\",\"room\":\"Maple\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-012",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"10:00\",\"room\":\"Maple\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"10:00\",\"room\":\"Maple\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-013",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"09:00\",\"room\":\"Cedar\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"09:00\",\"room\":\"Oak\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-014",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"11:00\",\"room\":\"Oak\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"10:30\",\"room\":\"Oak\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-015",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"10:00\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"10:30\",\"room\":\"Spruce\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-016",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"15:30\",\"room\":\"Oak\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"14:30\",\"room\":\"Oak\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-017",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"09:00\",\"room\":\"Pine\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"09:00\",\"room\":\"Pine\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-018",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"10:30\",\"room\":\"Maple\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"10:30\",\"room\":\"Maple\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-019",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"10:30\",\"room\":\"Willow\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"10:30\",\"room\":\"Willow\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-020",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"14:30\",\"room\":\"Willow\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"14:30\",\"room\":\"Willow\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-021",
+    "task": "appointments",
+    "response": " {\"day\":\"Friday\",\"time\":\"14:30\",\"room\":\"Oak\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"11:00\",\"room\":\"Willow\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-022",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"09:30\",\"room\":\"Pine\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"09:30\",\"room\":\"Pine\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-023",
+    "task": "appointments",
+    "response": " {\"day\":\"Friday\",\"time\":\"09:00\",\"room\":\"Maple\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"14:30\",\"room\":\"Maple\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-024",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"09:00\",\"room\":\"Hazel\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"09:00\",\"room\":\"Birch\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-025",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"14:30\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"14:30\",\"room\":\"Hazel\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-026",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"09:00\",\"room\":\"Hazel\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"09:00\",\"room\":\"Hazel\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-027",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"13:00\",\"room\":\"Hazel\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"13:00\",\"room\":\"Hazel\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-028",
+    "task": "appointments",
+    "response": " {\"day\":\"Friday\",\"time\":\"10:00\",\"room\":\"Cedar\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"10:00\",\"room\":\"Cedar\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-029",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"10:30\",\"room\":\"Ash\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"10:30\",\"room\":\"Birch\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-030",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"15:00\",\"room\":\"Oak\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"15:00\",\"room\":\"Oak\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-031",
+    "task": "appointments",
+    "response": " {\"day\":\"Friday\",\"time\":\"14:00\",\"room\":\"Pine\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"14:00\",\"room\":\"Pine\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-032",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"11:00\",\"room\":\"Pine\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"11:00\",\"room\":\"Pine\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-033",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"14:30\",\"room\":\"Elm\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"10:30\",\"room\":\"Spruce\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-034",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"14:30\",\"room\":\"Maple\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"14:30\",\"room\":\"Maple\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-035",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"11:00\",\"room\":\"Cedar\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"11:00\",\"room\":\"Cedar\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-036",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"10:30\",\"room\":\"Ash\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"10:30\",\"room\":\"Ash\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-037",
+    "task": "appointments",
+    "response": " {\"day\":\"Friday\",\"time\":\"14:00\",\"room\":\"Elm\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"14:00\",\"room\":\"Elm\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-038",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"13:00\",\"room\":\"Birch\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"13:00\",\"room\":\"Cedar\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-039",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Birch\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Birch\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-040",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"15:00\",\"room\":\"Maple\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"15:00\",\"room\":\"Birch\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-041",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"10:00\",\"room\":\"Ash\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"10:00\",\"room\":\"Ash\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-042",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"14:00\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Birch\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-043",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Pine\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"14:00\",\"room\":\"Pine\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-044",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"11:00\",\"room\":\"Elm\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"11:00\",\"room\":\"Elm\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-045",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"09:00\",\"room\":\"Willow\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"09:00\",\"room\":\"Willow\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-046",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"10:30\",\"room\":\"Hazel\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"10:30\",\"room\":\"Hazel\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-047",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"15:30\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"15:30\",\"room\":\"Birch\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-048",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"09:30\",\"room\":\"Ash\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"09:30\",\"room\":\"Ash\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-049",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"15:30\",\"room\":\"Maple\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"15:30\",\"room\":\"Maple\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-050",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"10:30\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"10:30\",\"room\":\"Spruce\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-051",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"09:30\",\"room\":\"Hazel\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"09:30\",\"room\":\"Hazel\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-052",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"11:00\",\"room\":\"Willow\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Maple\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-053",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"09:30\",\"room\":\"Elm\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"09:30\",\"room\":\"Elm\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-054",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"14:30\",\"room\":\"Maple\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"15:00\",\"room\":\"Maple\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-055",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Birch\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Birch\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-056",
+    "task": "appointments",
+    "response": " {\"day\":\"Friday\",\"time\":\"14:30\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"14:30\",\"room\":\"Spruce\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-057",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"09:00\",\"room\":\"Cedar\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"09:00\",\"room\":\"Cedar\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-058",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"15:00\",\"room\":\"Cedar\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"15:00\",\"room\":\"Cedar\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-059",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"10:00\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"10:00\",\"room\":\"Spruce\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-060",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"11:00\",\"room\":\"Willow\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Hazel\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-061",
+    "task": "appointments",
+    "response": " {\"day\":\"Friday\",\"time\":\"10:30\",\"room\":\"Pine\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"10:30\",\"room\":\"Pine\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-062",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"14:00\",\"room\":\"Willow\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"14:00\",\"room\":\"Willow\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-063",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Birch\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"14:00\",\"room\":\"Birch\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-064",
+    "task": "appointments",
+    "response": " {\"day\":\"Friday\",\"time\":\"14:00\",\"room\":\"Ash\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"10:30\",\"room\":\"Ash\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-065",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Oak\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-066",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"10:00\",\"room\":\"Pine\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"10:00\",\"room\":\"Elm\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-067",
+    "task": "appointments",
+    "response": " {\"day\":\"Friday\",\"time\":\"13:00\",\"room\":\"Ash\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"13:00\",\"room\":\"Ash\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-068",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"09:00\",\"room\":\"Cedar\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"09:00\",\"room\":\"Cedar\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-069",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"09:00\",\"room\":\"Birch\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"09:00\",\"room\":\"Elm\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-070",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"09:30\",\"room\":\"Hazel\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"09:30\",\"room\":\"Hazel\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-071",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"15:00\",\"room\":\"Hazel\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"15:00\",\"room\":\"Hazel\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-072",
+    "task": "appointments",
+    "response": " {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Birch\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-073",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"14:00\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"10:30\",\"room\":\"Willow\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-074",
+    "task": "appointments",
+    "response": " {\"day\":\"Friday\",\"time\":\"11:00\",\"room\":\"Hazel\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"11:00\",\"room\":\"Hazel\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-075",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"15:30\",\"room\":\"Pine\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"15:30\",\"room\":\"Pine\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-076",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"09:00\",\"room\":\"Birch\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"09:00\",\"room\":\"Birch\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-077",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"10:30\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"10:30\",\"room\":\"Spruce\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-078",
+    "task": "appointments",
+    "response": " {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Spruce\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-079",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Ash\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"11:00\",\"room\":\"Maple\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-080",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"14:30\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"14:30\",\"room\":\"Pine\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-081",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"09:30\",\"room\":\"Willow\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"09:00\",\"room\":\"Willow\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-082",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"15:00\",\"room\":\"Maple\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"15:00\",\"room\":\"Maple\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-083",
+    "task": "appointments",
+    "response": " {\"day\":\"Wednesday\",\"time\":\"09:00\",\"room\":\"Willow\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"09:00\",\"room\":\"Birch\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-084",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"09:30\",\"room\":\"Birch\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"15:30\",\"room\":\"Birch\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-085",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"15:30\",\"room\":\"Maple\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"09:30\",\"room\":\"Maple\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-086",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"15:30\",\"room\":\"Hazel\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"15:30\",\"room\":\"Hazel\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-087",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"14:00\",\"room\":\"Pine\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"14:00\",\"room\":\"Pine\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-088",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"10:30\",\"room\":\"Hazel\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"10:00\",\"room\":\"Hazel\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-089",
+    "task": "appointments",
+    "response": " {\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Elm\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"09:30\",\"room\":\"Willow\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-090",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"15:30\",\"room\":\"Pine\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"15:30\",\"room\":\"Spruce\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-091",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"14:00\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"14:00\",\"room\":\"Spruce\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-092",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"09:00\",\"room\":\"Oak\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"15:00\",\"room\":\"Oak\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-093",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"11:00\",\"room\":\"Pine\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"11:00\",\"room\":\"Pine\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-094",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"09:30\",\"room\":\"Cedar\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"09:30\",\"room\":\"Spruce\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-095",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"15:30\",\"room\":\"Pine\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"15:30\",\"room\":\"Pine\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-096",
+    "task": "appointments",
+    "response": " {\"day\":\"Monday\",\"time\":\"10:00\",\"room\":\"Cedar\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Monday\",\"time\":\"11:00\",\"room\":\"Cedar\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-097",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"13:00\",\"room\":\"Hazel\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Thursday\",\"time\":\"13:00\",\"room\":\"Hazel\"}",
+    "exact_match": true
+  },
+  {
+    "id": "appointments-test-098",
+    "task": "appointments",
+    "response": " {\"day\":\"Tuesday\",\"time\":\"15:00\",\"room\":\"Oak\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Tuesday\",\"time\":\"14:00\",\"room\":\"Oak\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-099",
+    "task": "appointments",
+    "response": " {\"day\":\"Thursday\",\"time\":\"09:30\",\"room\":\"Oak\"}",
+    "generated_tokens": 17,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Wednesday\",\"time\":\"09:30\",\"room\":\"Oak\"}",
+    "exact_match": false
+  },
+  {
+    "id": "appointments-test-100",
+    "task": "appointments",
+    "response": " {\"day\":\"Friday\",\"time\":\"09:00\",\"room\":\"Spruce\"}",
+    "generated_tokens": 18,
+    "truncated": false,
+    "mode": "joint_30",
+    "expected": "{\"day\":\"Friday\",\"time\":\"09:00\",\"room\":\"Spruce\"}",
+    "exact_match": true
+  }
+]

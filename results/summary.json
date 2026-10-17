@@ -1,0 +1,74 @@
+{
+  "food": {
+    "0": {
+      "correct": 57,
+      "total": 100
+    },
+    "10": {
+      "correct": 63,
+      "total": 100
+    },
+    "20": {
+      "correct": 81,
+      "total": 100
+    },
+    "30": {
+      "correct": 93,
+      "total": 100
+    }
+  },
+  "appointments": {
+    "0": {
+      "correct": 52,
+      "total": 100
+    },
+    "10": {
+      "correct": 51,
+      "total": 100
+    },
+    "20": {
+      "correct": 53,
+      "total": 100
+    },
+    "30": {
+      "correct": 52,
+      "total": 100
+    }
+  },
+  "returns": {
+    "0": {
+      "correct": 57,
+      "total": 100
+    },
+    "10": {
+      "correct": 61,
+      "total": 100
+    },
+    "20": {
+      "correct": 69,
+      "total": 100
+    },
+    "30": {
+      "correct": 76,
+      "total": 100
+    }
+  },
+  "addition": {
+    "0": {
+      "correct": 49,
+      "total": 100
+    },
+    "10": {
+      "correct": 53,
+      "total": 100
+    },
+    "20": {
+      "correct": 52,
+      "total": 100
+    },
+    "30": {
+      "correct": 47,
+      "total": 100
+    }
+  }
+}

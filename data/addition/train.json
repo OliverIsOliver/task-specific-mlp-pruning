@@ -1,0 +1,502 @@
+[
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "6_terms",
+    "transcript": "Compute 9+6+12+16+4+15. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 9+6+12+16+4+15. Return only the final integer.\nAnswer:",
+    "answer": "62",
+    "case_key": "(4, 6, 9, 12, 15, 16)",
+    "id": "addition-train-001"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "5_terms",
+    "transcript": "Compute 16+12+19+17+11. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 16+12+19+17+11. Return only the final integer.\nAnswer:",
+    "answer": "75",
+    "case_key": "(11, 12, 16, 17, 19)",
+    "id": "addition-train-002"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "5_terms",
+    "transcript": "Add 7, 17, 9, 2 and 9.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 7, 17, 9, 2 and 9.\nAnswer:",
+    "answer": "44",
+    "case_key": "(2, 7, 9, 9, 17)",
+    "id": "addition-train-003"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "6_terms",
+    "transcript": "Compute 12+11+14+3+6+5. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 12+11+14+3+6+5. Return only the final integer.\nAnswer:",
+    "answer": "51",
+    "case_key": "(3, 5, 6, 11, 12, 14)",
+    "id": "addition-train-004"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "6_terms",
+    "transcript": "Add 15, 19, 4, 13, 18 and 4.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 15, 19, 4, 13, 18 and 4.\nAnswer:",
+    "answer": "73",
+    "case_key": "(4, 4, 13, 15, 18, 19)",
+    "id": "addition-train-005"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "3_terms",
+    "transcript": "Add 7, 8 and 4.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 7, 8 and 4.\nAnswer:",
+    "answer": "19",
+    "case_key": "(4, 7, 8)",
+    "id": "addition-train-006"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "4_terms",
+    "transcript": "Add 15, 12, 18 and 14.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 15, 12, 18 and 14.\nAnswer:",
+    "answer": "59",
+    "case_key": "(12, 14, 15, 18)",
+    "id": "addition-train-007"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "6_terms",
+    "transcript": "Compute 2+10+19+10+19+8. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 2+10+19+10+19+8. Return only the final integer.\nAnswer:",
+    "answer": "68",
+    "case_key": "(2, 8, 10, 10, 19, 19)",
+    "id": "addition-train-008"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "4_terms",
+    "transcript": "Add 4, 13, 16 and 8.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 4, 13, 16 and 8.\nAnswer:",
+    "answer": "41",
+    "case_key": "(4, 8, 13, 16)",
+    "id": "addition-train-009"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "3_terms",
+    "transcript": "Add 10, 17 and 14.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 10, 17 and 14.\nAnswer:",
+    "answer": "41",
+    "case_key": "(10, 14, 17)",
+    "id": "addition-train-010"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "3_terms",
+    "transcript": "Compute 14+4+12. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 14+4+12. Return only the final integer.\nAnswer:",
+    "answer": "30",
+    "case_key": "(4, 12, 14)",
+    "id": "addition-train-011"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "5_terms",
+    "transcript": "Compute 5+19+7+13+18. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 5+19+7+13+18. Return only the final integer.\nAnswer:",
+    "answer": "62",
+    "case_key": "(5, 7, 13, 18, 19)",
+    "id": "addition-train-012"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "5_terms",
+    "transcript": "Add 5, 7, 8, 2 and 17.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 5, 7, 8, 2 and 17.\nAnswer:",
+    "answer": "39",
+    "case_key": "(2, 5, 7, 8, 17)",
+    "id": "addition-train-013"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "6_terms",
+    "transcript": "Add 13, 10, 4, 16, 14 and 17.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 13, 10, 4, 16, 14 and 17.\nAnswer:",
+    "answer": "74",
+    "case_key": "(4, 10, 13, 14, 16, 17)",
+    "id": "addition-train-014"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "5_terms",
+    "transcript": "Add 5, 4, 5, 5 and 4.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 5, 4, 5, 5 and 4.\nAnswer:",
+    "answer": "23",
+    "case_key": "(4, 4, 5, 5, 5)",
+    "id": "addition-train-015"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "3_terms",
+    "transcript": "Compute 19+11+6. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 19+11+6. Return only the final integer.\nAnswer:",
+    "answer": "36",
+    "case_key": "(6, 11, 19)",
+    "id": "addition-train-016"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "6_terms",
+    "transcript": "Compute 15+10+9+6+18+14. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 15+10+9+6+18+14. Return only the final integer.\nAnswer:",
+    "answer": "72",
+    "case_key": "(6, 9, 10, 14, 15, 18)",
+    "id": "addition-train-017"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "5_terms",
+    "transcript": "Compute 11+5+8+16+7. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 11+5+8+16+7. Return only the final integer.\nAnswer:",
+    "answer": "47",
+    "case_key": "(5, 7, 8, 11, 16)",
+    "id": "addition-train-018"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "5_terms",
+    "transcript": "Add 14, 18, 10, 14 and 13.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 14, 18, 10, 14 and 13.\nAnswer:",
+    "answer": "69",
+    "case_key": "(10, 13, 14, 14, 18)",
+    "id": "addition-train-019"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "4_terms",
+    "transcript": "Compute 6+17+18+5. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 6+17+18+5. Return only the final integer.\nAnswer:",
+    "answer": "46",
+    "case_key": "(5, 6, 17, 18)",
+    "id": "addition-train-020"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "4_terms",
+    "transcript": "Add 17, 15, 8 and 17.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 17, 15, 8 and 17.\nAnswer:",
+    "answer": "57",
+    "case_key": "(8, 15, 17, 17)",
+    "id": "addition-train-021"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "3_terms",
+    "transcript": "Add 12, 11 and 9.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 12, 11 and 9.\nAnswer:",
+    "answer": "32",
+    "case_key": "(9, 11, 12)",
+    "id": "addition-train-022"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "4_terms",
+    "transcript": "Compute 13+5+3+18. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 13+5+3+18. Return only the final integer.\nAnswer:",
+    "answer": "39",
+    "case_key": "(3, 5, 13, 18)",
+    "id": "addition-train-023"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "4_terms",
+    "transcript": "Add 7, 9, 12 and 7.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 7, 9, 12 and 7.\nAnswer:",
+    "answer": "35",
+    "case_key": "(7, 7, 9, 12)",
+    "id": "addition-train-024"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "6_terms",
+    "transcript": "Compute 3+15+19+2+7+18. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 3+15+19+2+7+18. Return only the final integer.\nAnswer:",
+    "answer": "64",
+    "case_key": "(2, 3, 7, 15, 18, 19)",
+    "id": "addition-train-025"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "6_terms",
+    "transcript": "Compute 13+6+13+12+12+14. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 13+6+13+12+12+14. Return only the final integer.\nAnswer:",
+    "answer": "70",
+    "case_key": "(6, 12, 12, 13, 13, 14)",
+    "id": "addition-train-026"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "4_terms",
+    "transcript": "Add 15, 10, 12 and 5.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 15, 10, 12 and 5.\nAnswer:",
+    "answer": "42",
+    "case_key": "(5, 10, 12, 15)",
+    "id": "addition-train-027"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "6_terms",
+    "transcript": "Add 12, 6, 18, 19, 7 and 12.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 12, 6, 18, 19, 7 and 12.\nAnswer:",
+    "answer": "74",
+    "case_key": "(6, 7, 12, 12, 18, 19)",
+    "id": "addition-train-028"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "4_terms",
+    "transcript": "Compute 3+10+2+12. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 3+10+2+12. Return only the final integer.\nAnswer:",
+    "answer": "27",
+    "case_key": "(2, 3, 10, 12)",
+    "id": "addition-train-029"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "3_terms",
+    "transcript": "Compute 14+16+7. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 14+16+7. Return only the final integer.\nAnswer:",
+    "answer": "37",
+    "case_key": "(7, 14, 16)",
+    "id": "addition-train-030"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "5_terms",
+    "transcript": "Compute 2+12+17+6+19. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 2+12+17+6+19. Return only the final integer.\nAnswer:",
+    "answer": "56",
+    "case_key": "(2, 6, 12, 17, 19)",
+    "id": "addition-train-031"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "4_terms",
+    "transcript": "Compute 18+18+12+2. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 18+18+12+2. Return only the final integer.\nAnswer:",
+    "answer": "50",
+    "case_key": "(2, 12, 18, 18)",
+    "id": "addition-train-032"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "3_terms",
+    "transcript": "Compute 15+18+7. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 15+18+7. Return only the final integer.\nAnswer:",
+    "answer": "40",
+    "case_key": "(7, 15, 18)",
+    "id": "addition-train-033"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "4_terms",
+    "transcript": "Compute 2+15+19+5. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 2+15+19+5. Return only the final integer.\nAnswer:",
+    "answer": "41",
+    "case_key": "(2, 5, 15, 19)",
+    "id": "addition-train-034"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "6_terms",
+    "transcript": "Add 3, 17, 3, 13, 6 and 3.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 3, 17, 3, 13, 6 and 3.\nAnswer:",
+    "answer": "45",
+    "case_key": "(3, 3, 3, 6, 13, 17)",
+    "id": "addition-train-035"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "5_terms",
+    "transcript": "Compute 16+14+2+8+18. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 16+14+2+8+18. Return only the final integer.\nAnswer:",
+    "answer": "58",
+    "case_key": "(2, 8, 14, 16, 18)",
+    "id": "addition-train-036"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "3_terms",
+    "transcript": "Add 3, 6 and 14.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 3, 6 and 14.\nAnswer:",
+    "answer": "23",
+    "case_key": "(3, 6, 14)",
+    "id": "addition-train-037"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "3_terms",
+    "transcript": "Compute 19+8+6. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 19+8+6. Return only the final integer.\nAnswer:",
+    "answer": "33",
+    "case_key": "(6, 8, 19)",
+    "id": "addition-train-038"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "5_terms",
+    "transcript": "Compute 15+11+6+6+4. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 15+11+6+6+4. Return only the final integer.\nAnswer:",
+    "answer": "42",
+    "case_key": "(4, 6, 6, 11, 15)",
+    "id": "addition-train-039"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "4_terms",
+    "transcript": "Compute 5+10+4+14. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 5+10+4+14. Return only the final integer.\nAnswer:",
+    "answer": "33",
+    "case_key": "(4, 5, 10, 14)",
+    "id": "addition-train-040"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "3_terms",
+    "transcript": "Compute 19+2+5. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 19+2+5. Return only the final integer.\nAnswer:",
+    "answer": "26",
+    "case_key": "(2, 5, 19)",
+    "id": "addition-train-041"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "3_terms",
+    "transcript": "Add 9, 12 and 2.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 9, 12 and 2.\nAnswer:",
+    "answer": "23",
+    "case_key": "(2, 9, 12)",
+    "id": "addition-train-042"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "6_terms",
+    "transcript": "Add 11, 11, 18, 16, 9 and 5.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 11, 11, 18, 16, 9 and 5.\nAnswer:",
+    "answer": "70",
+    "case_key": "(5, 9, 11, 11, 16, 18)",
+    "id": "addition-train-043"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "3_terms",
+    "transcript": "Add 12, 14 and 16.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 12, 14 and 16.\nAnswer:",
+    "answer": "42",
+    "case_key": "(12, 14, 16)",
+    "id": "addition-train-044"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "5_terms",
+    "transcript": "Add 19, 11, 11, 15 and 5.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 19, 11, 11, 15 and 5.\nAnswer:",
+    "answer": "61",
+    "case_key": "(5, 11, 11, 15, 19)",
+    "id": "addition-train-045"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "6_terms",
+    "transcript": "Add 6, 13, 16, 7, 9 and 7.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 6, 13, 16, 7, 9 and 7.\nAnswer:",
+    "answer": "58",
+    "case_key": "(6, 7, 7, 9, 13, 16)",
+    "id": "addition-train-046"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "5_terms",
+    "transcript": "Add 19, 18, 16, 5 and 5.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 19, 18, 16, 5 and 5.\nAnswer:",
+    "answer": "63",
+    "case_key": "(5, 5, 16, 18, 19)",
+    "id": "addition-train-047"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "3_terms",
+    "transcript": "Compute 18+15+8. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 18+15+8. Return only the final integer.\nAnswer:",
+    "answer": "41",
+    "case_key": "(8, 15, 18)",
+    "id": "addition-train-048"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "4_terms",
+    "transcript": "Compute 8+8+13+11. Return only the final integer.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Compute 8+8+13+11. Return only the final integer.\nAnswer:",
+    "answer": "40",
+    "case_key": "(8, 8, 11, 13)",
+    "id": "addition-train-049"
+  },
+  {
+    "task": "arithmetic",
+    "suite": "small_integer_addition",
+    "family": "4_terms",
+    "transcript": "Add 7, 13, 5 and 16.",
+    "prompt": "Add all the listed integers. Return only their sum as an integer, without workings.\n\nInput: Compute 17+8+6.\nAnswer: 31\nInput: Compute 6+9+4+7.\nAnswer: 26\nInput: Compute 3+12+5+9+4.\nAnswer: 33\n\nInput: Add 7, 13, 5 and 16.\nAnswer:",
+    "answer": "41",
+    "case_key": "(5, 7, 13, 16)",
+    "id": "addition-train-050"
+  }
+]
