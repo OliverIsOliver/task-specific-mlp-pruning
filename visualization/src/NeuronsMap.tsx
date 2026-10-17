@@ -46,7 +46,7 @@ export function NeuronsMap({
           const scale = scales?.[l]?.[r] ?? 1;
           const transform = scale === 1 ? undefined
             : `translate(${x + 14.5} ${y + 14.5}) scale(${scale}) translate(${-x - 14.5} ${-y - 14.5})`;
-          return <g key={`${l}:${r}`} className="neuron-group" data-selected={selectedGroup?.[0] === l && selectedGroup?.[1] === r} transform={transform}>
+          return <g key={`${l}:${r}`} className="neuron-group" transform={transform}>
             <rect x={x} y={y} width="29" height="29" rx="4" fill="#f0f3f7" />
             <rect x={x} y={y} width="29" height="29" rx="4" fill="#3b82f6"
               className="neuron-node" fillOpacity={opacity} tabIndex={0} role="button"
@@ -59,7 +59,6 @@ export function NeuronsMap({
               <title>{`Layer ${l + 1}/${data.layers} · Group ${r + 1}/10 · ${remaining(mode.remaining[l][r], data.groups[l][r].size)} · mean importance ${Math.round(data.groups[l][r].percentile)}%`}</title>
             </rect>
             <rect className="node-hover" x={x + 1} y={y + 1} width="27" height="27" rx="3" />
-            <rect className="node-outline" x={x - 0.5} y={y - 0.5} width="30" height="30" rx="4.5" />
           </g>;
         }))}
         {[0, 4, 9, 14, 19, 25].map(l => <text key={l} x={l * 36 + 19} y="382" textAnchor="middle">{String(l + 1).padStart(2, "0")}</text>)}
