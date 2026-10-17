@@ -38,7 +38,7 @@ h2 { font-size: 12px; font-weight: 550; margin: 0; }.section-heading > span { fo
 .map-scroll { overflow-x: auto; margin-top: 20px; padding: 4px 0 0; }
 .heatmap { display: block; width: 100%; overflow: visible; }.heatmap text { font-family: inherit; font-size: 9px; fill: #a0aaba; }
 .heatmap rect { transition: fill-opacity 340ms; }.neuron-node { cursor: pointer; outline: none; }
-.node-hover { fill: none; stroke: #3b82f6; stroke-width: 2; opacity: 0; pointer-events: none; }
+.node-hover { fill: none; stroke: #1e417b; stroke-width: 2; opacity: 0; pointer-events: none; }
 .neuron-group:hover .node-hover, .neuron-node:focus-visible ~ .node-hover { opacity: 1; }
 .map-key { display: flex; align-items: center; justify-content: center; margin: 0 4px 20px; font-size: 10px; color: #95a0b0; }
 .legend { display: inline-flex; align-items: center; gap: 7px; }.legend > i { width: 9px; height: 9px; border-radius: 2px; background: #f0f3f7; border: 1px solid #e6ebf2; }
