@@ -1,6 +1,6 @@
 # Task-specific MLP pruning on Gemma 2 2B
 
-This project’s goal is to find how many MLP neurons can be removed for a task while keeping its accuracy. The PyTorch pipeline ranks neurons by activation × downward sensitivity on a training set, then learns which combination of neurons to keep across all 26 MLP layers for a chosen percentage of neurons (e.g., 70%, 80%, or 90%). It removes the rest and checks performance on a separate testing set.
+This project’s goal is to find how many MLP neurons can be removed for a task while keeping its accuracy. The PyTorch pipeline ranks neurons by activation × downward sensitivity on a training set, then learns which combination of neurons to keep across all 26 MLP layers for a chosen percentage of neurons (e.g., 70%, 80%, or 90%). Lastly, it removes the rest of the neurons and checks performance on a separate testing set.
 
 [See in-depth results](https://oliveramaher.github.io/task-specific-mlp-pruning)
 
@@ -8,37 +8,35 @@ This project’s goal is to find how many MLP neurons can be removed for a task 
 
 ### 1. Measure how much each neuron affects training loss
 
-For each training example, give Gemma the prompt and its correct answer. Compute the average loss on the answer tokens and calculate how sensitive that loss is to each MLP neuron's activation. A **neuron’s activation** tells us its output strength. Its **gradient** tells us how sensitive the loss is to that activation. Then calculate the importance score for each neuron using its activations and loss gradients:
+To begin, give Gemma the prompt and its correct answer for every training example. Then calculate the average loss of the answer tokens and how sensitive that loss is to each neuron's activation. The **neuron’s activation** tells us its output strength and its **gradient** tells us how sensitive the loss is to that activation, so using its activations and loss gradients, we can calculate the importance score for each neuron using this formula:
 
 $$
 F_j = \frac{1}{2M}\sum_{i=1}^{M}\left(\sum_t a_{itj}\frac{\partial L_i}{\partial a_{itj}}\right)^2
 $$
 
-Here, $a_{itj}$ is neuron $j$’s activation at token $t$, $L_i$ is the training answer loss, and $M=50$ for 50 training examples. This is a **diagonal empirical Fisher approximation** which estimates the loss sensitivity rather than counts how often a neuron fires. A low score makes a neuron more likely to remove, but it does not prove that the neuron is unused. The next stage learns which combination of neurons to keep.
+$a_{itj}$ is neuron $j$’s activation at token $t$, $L_i$ is the training answer loss, and $M=50$ (for 50 training examples). The equation uses a **diagonal empirical Fisher approximation** to estimate the loss sensitivity rather than actually count how often the neuron fires. If a neuron recieves a low score, its more likely to be removed although we cannot with 100% certainty know that the neuron is unused.
 
 Code: [`src/fisher.py`](src/fisher.py).
 
 ### 2. Create the starting mask
 
-Use the scores across all 26 layers and select the lowest-scoring channels to remove. A 20% cut removes **47,923 of 239,616 MLP channels**. Individual layers lose different amounts.
-
-Fisher estimates are used to rank initally. Then each neuron recieved a gate, using **1 to keep a neuron and 0 to remove it**.
+From the scores, we select the neurons across the 26 MLP layers to remove, and for reference, a 20% cut removes **47,923 of 239,616 MLP channels**, however different layers lose different amounts. Before neurons are quite removed from the matrices, each neuron recieves a gate, using **1 to keep a neuron and 0 to remove it**.
 
 ### 3. Learn a better selection at the same budget
 
-For a 20% cut, the optimizer can change **which** 47,923 neurons are removed, but it must always remove 47,923. It learns which to select from the training answers.
+For a 20% cut, the optimizer can change **which** 47,923 neurons are removed, but the amount removed must stay the same.
 
-Give every neuron a trainable gate score, initialized by the Fisher-ranking order. On each pass, keep the highest-scoring channels and mask the rest. After backpropagation, update the scores and create a new mask, but **original model weights are always frozen**.
+We give every neuron a trainable gate score that starts out based on the Fisher-ranking order. Then on each example, we keep the highest-scoring neurons and mute the rest by making their gate 0. After backpropagation, we update the scores and create a new mask, but **the original weights never change**.
 
-Normally, removing a neuron means the model cannot learning whether it should be kept instead. A **straight-through estimator** calculates how useful each neuron would be, even if it is currently removed. That lets the optimizer restore initially removed neurons and remove other ones while keeping the total count the same.
+Normally, removing a neuron makes it so the model cannot learning whether it should stay removed or be kept ,but a **straight-through estimator** calculates how useful each neuron would be, even if it is already removed. That lets the optimizer bring back removed neurons and remove other ones so the total count stays the same.
 
 Code: [`src/masks.py`](src/masks.py).
 
 ### 4. Slice the matrices, then test the smaller model
 
-For each mask, use the original weights and physically cut the MLP matrices, removing the selected rows and columns. The remaining weights don't change, as well as attention, embeddings, and the output head.
+With the final mask, use the original weights and physically split up the MLP matrices to  removing the selected rows and columns. Still, the weights don't change, as well as attention, embeddings, and the output head.
 
-Run the resulting smaller model on the same 100 held-out prompts per task and then grade the answers. Food orders are compared to food/quantity pairs regardless of order, appointment and policy outputs are compared to matching JSONs, and addition is compared to the exact number.
+Finally, run the resulting shrunken model on the same 100 held-out prompts and then grade the answers. Food orders must match food/quantity pairs in any order, appointment and policy outputs must match the JSON answers, and addition must equal the exact number.
 
 Code: [`src/model.py`](src/model.py), [`src/generation.py`](src/generation.py), and [`src/evaluation.py`](src/evaluation.py).
 
