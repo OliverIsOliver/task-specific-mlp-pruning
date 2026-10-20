@@ -2,7 +2,7 @@
 
 This project’s goal is to find how many MLP neurons can be removed for a task while keeping its accuracy. The PyTorch pipeline ranks neurons by activation × downward sensitivity on a training set, then learns which combination of neurons to keep across all 26 MLP layers for a chosen percentage of neurons (e.g., 70%, 80%, or 90%). It removes the rest and checks performance on a separate testing set.
 
-[See in-depth results](https://oliveramaher.github.io/task-specific-mlp-pruning/)
+[See in-depth results](https://oliveramaher.github.io/task-specific-mlp-pruning/?v=d9ec1b1)
 
 # Process
 
@@ -44,7 +44,7 @@ Code: [`src/model.py`](src/model.py), [`src/generation.py`](src/generation.py), 
 
 # Results
 
-![Task accuracy by percentage of MLP neurons cut](assets/task-accuracy.png)
+![Task accuracy by percentage of MLP neurons cut](assets/task-accuracy.png?v=27fc9073)
 
 The chart shows accuracy on testing sets for each task, comparing the original model with pruned models that remove 10%, 20%, or 30% of MLP channels. Food-order extraction and return-policy decisions score highest at a 30% cut, appointment scheduling stays nearly flat, and integer addition is highest at a 10% cut. These results are for these four specific test sets and does not show that pruning improves general performance.
 
