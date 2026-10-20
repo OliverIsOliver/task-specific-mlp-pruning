@@ -8,27 +8,27 @@ This project’s goal is to find how many MLP neurons can be removed for a task 
 
 ### 1. Measure how much each neuron affects training loss
 
-To begin, give Gemma the prompt and its correct answer for every training example. Then calculate the average loss of the answer tokens and how sensitive that loss is to each neuron's activation. The **neuron’s activation** tells us its output strength and its **gradient** tells us how sensitive the loss is to that activation, so using its activations and loss gradients, we can calculate the importance score for each neuron using this formula:
+To begin, give Gemma the prompt and its correct answer for every training example. Then calculate the average loss of the answer tokens and how sensitive that loss is to each neuron's activation. The neuron’s activation tells us its output strength and its gradient tells us how sensitive the loss is to that activation, so using its activations and loss gradients, we can calculate the importance score for each neuron using this formula:
 
 $$
 F_j = \frac{1}{2M}\sum_{i=1}^{M}\left(\sum_t a_{itj}\frac{\partial L_i}{\partial a_{itj}}\right)^2
 $$
 
-$a_{itj}$ is neuron $j$’s activation at token $t$, $L_i$ is the training answer loss, and $M=50$ (for 50 training examples). The equation uses a **diagonal empirical Fisher approximation** to estimate the loss sensitivity rather than actually count how often the neuron fires. If a neuron recieves a low score, its more likely to be removed although we cannot with 100% certainty know that the neuron is unused.
+$a_{itj}$ is neuron $j$’s activation at token $t$, $L_i$ is the training answer loss, and $M=50$ (for 50 training examples). The equation uses a diagonal empirical Fisher approximation to estimate the loss sensitivity rather than actually count how often the neuron fires. If a neuron recieves a low score, its more likely to be removed although we cannot with 100% certainty know that the neuron is unused.
 
 Code: [`src/fisher.py`](src/fisher.py).
 
 ### 2. Create the starting mask
 
-From the scores, we select the neurons across the 26 MLP layers to remove, and for reference, a 20% cut removes **47,923 of 239,616 MLP channels**, however different layers lose different amounts. Before neurons are quite removed from the matrices, each neuron recieves a gate, using **1 to keep a neuron and 0 to remove it**.
+From the scores, we select the neurons across the 26 MLP layers to remove, and for reference, a 20% cut removes 47,923 of 239,616 MLP channels, however different layers lose different amounts. Before neurons are quite removed from the matrices, each neuron recieves a gate, using 1 to keep a neuron and 0 to remove it.
 
 ### 3. Learn a better selection at the same budget
 
-For a 20% cut, the optimizer can change **which** 47,923 neurons are removed, but the amount removed must stay the same.
+For a 20% cut, the optimizer can change which 47,923 neurons are removed, but the amount removed must stay the same.
 
-We give every neuron a trainable gate score that starts out based on the Fisher-ranking order. Then on each example, we keep the highest-scoring neurons and mute the rest by making their gate 0. After backpropagation, we update the scores and create a new mask, but **the original weights never change**.
+We give every neuron a trainable gate score that starts out based on the Fisher-ranking order. Then on each example, we keep the highest-scoring neurons and mute the rest by making their gate 0. After backpropagation, we update the scores and create a new mask, but the original weights never change.
 
-Normally, removing a neuron makes it so the model cannot learning whether it should stay removed or be kept ,but a **straight-through estimator** calculates how useful each neuron would be, even if it is already removed. That lets the optimizer bring back removed neurons and remove other ones so the total count stays the same.
+Normally, removing a neuron makes it so the model cannot learning whether it should stay removed or be kept ,but a straight-through estimator calculates how useful each neuron would be, even if it is already removed. That lets the optimizer bring back removed neurons and remove other ones so the total count stays the same.
 
 Code: [`src/masks.py`](src/masks.py).
 
