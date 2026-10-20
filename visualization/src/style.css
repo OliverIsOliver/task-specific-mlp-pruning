@@ -14,7 +14,7 @@ header { position: fixed; top: 16px; left: 50%; transform: translateX(-50%); z-i
 .mark i { border-radius: 2px; background: #3b82f6; }
 .mark i:nth-child(2) { opacity: .65; }.mark i:nth-child(3) { opacity: .4; }.mark i:nth-child(4) { opacity: .15; }
 .github-link { display: inline-flex; align-items: center; gap: 8px; color: #000; font-size: 11px; font-weight: 500; text-decoration: none; }.github-link svg { display: block; flex-shrink: 0; }.github-link:hover { color: #3b82f6; }
-.experiment { margin: 22px 0 24px; padding: 26px; border: 1px solid #e7ecf3; border-radius: 15px; background: #fff; box-shadow: 0 4px 22px #1b345004; }
+.experiment { margin: 22px 0 0; padding: 26px 26px 0; border: none; border-radius: 15px; background: #fff; box-shadow: none; }
 .task-tabs { display: flex; align-items: center; gap: 27px; margin-left: auto; }
 .task-tabs button { position: relative; border: 0; padding: 12px 0; background: transparent; color: #8993a3; font-size: 12px; }
 .task-tabs button::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 2px; background: #3b82f6; opacity: 0; transition: opacity 160ms; }
@@ -28,25 +28,26 @@ h1 { font-size: 30px; font-weight: 500; letter-spacing: -1px; line-height: 1.2; 
 .tabs { display: flex; padding: 4px; border: 1px solid #e9edf3; border-radius: 10px; gap: 3px; flex-shrink: 0; }
 .tabs button { border: 0; background: transparent; padding: 9px 13px; border-radius: 6px; font-size: 11px; color: #8490a2; }
 .tabs button:hover { background: #f6f8fc; }.tabs button[aria-pressed="true"] { background: #eaf2ff; color: #3275db; font-weight: 600; }
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 24px; padding-top: 23px; border-top: 1px solid #edf0f4; }
-.stats > div { padding-left: 30px; border-left: 1px solid #edf0f4; }.stats > div:first-child { padding-left: 0; border: none; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 24px; padding-top: 0; border-top: 1px solid #edf0f4; }
+.stats > div { padding: 23px 0 50px 30px; border-left: 1px solid #edf0f4; }.stats > div:first-child { padding-left: 0; border: none; }
 .stats > div > span { font-size: 11px; color: #7c899d; }.stats strong { display: block; font-size: 32px; font-weight: 450; letter-spacing: -1px; margin-top: 8px; font-variant-numeric: tabular-nums; }
 .stats small { font-size: 17px; color: #9da7b6; font-weight: 400; letter-spacing: -.4px; }.stats p { color: #9aa4b3; margin: 5px 0 0; font-size: 10px; }
-.map-card { border: 1px solid #e7ecf3; border-radius: 15px; padding: 24px 25px 0; box-shadow: 0 4px 22px #1b345004; }
+.map-card { border: none; border-radius: 15px; padding: 24px 25px 0; box-shadow: none; }
+.experiment + .map-card { border-top: 1px solid #edf0f4; border-radius: 0; }
 .section-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 25px; }
 h2 { font-size: 12px; font-weight: 550; margin: 0; }.section-heading > span { font-size: 10px; color: #98a3b3; }b { font-weight: 400; color: #c5ccd6; margin: 0 5px; }
 .map-scroll { overflow-x: auto; margin-top: 20px; padding: 4px 0 0; }
 .heatmap { display: block; width: 100%; overflow: visible; }.heatmap text { font-family: inherit; font-size: 9px; fill: #a0aaba; }
 .heatmap rect { transition: fill-opacity 340ms; }.neuron-node { cursor: pointer; outline: none; }
 .node-hover { fill: none; stroke: #1e417b; stroke-width: 2; opacity: 0; pointer-events: none; }
-.neuron-group:hover .node-hover, .neuron-node:focus-visible ~ .node-hover { opacity: 1; }
-.map-key { display: flex; align-items: center; justify-content: center; margin: 0 4px 20px; font-size: 10px; color: #95a0b0; }
+.neuron-node:focus-visible ~ .node-hover { opacity: 1; }
+.map-key { display: flex; align-items: center; justify-content: center; margin: 0 4px 20px; padding-bottom: 18px; border-bottom: 1px solid #edf0f4; font-size: 10px; color: #95a0b0; }
 .legend { display: inline-flex; align-items: center; gap: 7px; }.legend > i { width: 9px; height: 9px; border-radius: 2px; background: #f0f3f7; border: 1px solid #e6ebf2; }
 .ramp { width: 44px; height: 9px; border-radius: 2px; background: linear-gradient(90deg, #e9f0ff, #3b82f6); margin-left: 13px; }
 .layer-direction { display: flex; align-items: center; gap: 6px; color: #77859a; }
-.map-detail { border-top: 1px solid #edf0f4; color: #98a3b3; font-size: 10px; min-height: 46px; padding: 10px 0; display: flex; flex-wrap: wrap; gap: 8px 6px; align-items: center; }.map-detail strong { font-weight: 550; color: #3b82f6; }
+.map-detail { color: #98a3b3; font-size: 10px; min-height: 46px; padding: 10px 0; display: flex; flex-wrap: wrap; gap: 8px 6px; align-items: center; }.map-detail strong { font-weight: 550; color: #3b82f6; }
 .map-detail strong ~ span::before { content: "–"; margin-right: 6px; color: #b0b9c7; }
-.replay { display: grid; grid-template-columns: .9fr 1.1fr; border: 1px solid #e7ecf3; border-radius: 15px; margin-top: 24px; overflow: hidden; }
+.replay { display: grid; grid-template-columns: .9fr 1.1fr; border: none; border-radius: 15px; margin-top: 24px; overflow: hidden; }
 .results-panel { padding: 24px 26px; }.answer-panel { padding: 24px 26px; border-left: 1px solid #e7ecf3; background: #fff; min-width: 0; }
 .result-grid { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 6px; margin: 23px 0 18px; }
 .result-grid button { aspect-ratio: 1; padding: 0; border: 0; border-radius: 5px; font-size: 9px; font-weight: 550; font-variant-numeric: tabular-nums; }
@@ -62,7 +63,7 @@ h2 { font-size: 12px; font-weight: 550; margin: 0; }.section-heading > span { fo
 .mismatch-arrow { display: inline-block; font-style: normal; transform: translate(0.5px, 0.5px); }
 .expected { font-size: 10px; color: #9aa5b5; margin-bottom: 0; }
 .expected-answer { margin-top: 22px; }
-footer { display: flex; justify-content: flex-end; padding-top: 28px; }
+footer { display: flex; justify-content: center; padding-top: 28px; }
 @keyframes appear { from { opacity: .5; transform: translateY(3px); } to { opacity: 1; transform: translateY(0); } }
 @media (max-width: 850px) { main { padding: 0 24px 56px; }.task-tabs { gap: 20px; }.replay { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 580px) { main { padding: 0 18px 56px; }header { align-items: flex-start; flex-direction: column; gap: 16px; padding-top: 24px; }.task-tabs { width: 100%; justify-content: space-between; gap: 12px; margin: 0; }.task-tabs button { font-size: 11px; }.experiment { margin-top: 30px; }.experiment-heading { align-items: flex-start; flex-direction: column; gap: 20px; }.experiment .tabs { width: 100%; }.experiment .tabs button { flex: 1; }h1 { font-size: 28px; }.stats strong { font-size: 24px; }.stats small { font-size: 12px; }.stats > div { padding-left: 13px; }.stats > div > span { font-size: 9px; }.stats p { font-size: 8px; }.map-card { padding: 18px 15px 0; }.map-card .section-heading > span { font-size: 8px; }.map-detail { font-size: 9px; line-height: 1.7; padding: 10px 0; gap: 8px 6px; flex-wrap: wrap; }.map-key { font-size: 8px; }.ramp { margin-left: 4px; width: 30px; }.replay { grid-template-columns: 1fr; }.answer-panel { border-left: 0; border-top: 1px solid #e7ecf3; }.results-panel, .answer-panel { padding: 21px; }.transcript { font-size: 13px; } }
@@ -72,8 +73,7 @@ footer { display: flex; justify-content: flex-end; padding-top: 28px; }
 
 header { display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; }
 header .task-tabs { margin: 0; justify-content: center; }
-header .github-link { justify-self: end; }
-@media (max-width: 580px) { .experiment { padding: 21px; }.experiment .tabs button { padding: 9px 6px; }.experiment .stats { margin-top: 24px; } }
+@media (max-width: 580px) { .experiment { padding: 21px 21px 0; }.stats > div { padding-bottom: 45px; }.experiment .tabs button { padding: 9px 6px; }.experiment .stats { margin-top: 24px; } }
 
 .task-menu { display: none; position: relative; justify-self: center; min-width: 0; }
 .task-menu summary { display: flex; align-items: center; justify-content: center; gap: 9px; padding: 9px 5px; list-style: none; cursor: pointer; font-size: 12px; font-weight: 500; color: #3275db; white-space: nowrap; }
@@ -82,16 +82,24 @@ header .github-link { justify-self: end; }
 .task-options { position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%); width: 200px; padding: 6px; border: 1px solid #e8edf4; border-radius: 14px; background: #fffffff5; -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); box-shadow: 0 12px 36px #253b6514, 0 2px 6px #253b6508; }
 .task-options button { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 12px 13px; border: 0; border-radius: 8px; background: transparent; color: #69768b; font-size: 12px; text-align: left; }
 .task-options button:hover { background: #f4f7fc; }.task-options button[aria-pressed="true"] { background: #edf4ff; color: #3275db; }.task-options button span { font-size: 12px; }
-.mobile-footer { display: none; }
 @media (max-width: 1024px) {
-  header { grid-template-columns: 1fr auto; }header .task-tabs, header .github-link { display: none; }
+  header { grid-template-columns: 1fr auto; }header .task-tabs { display: none; }
   .task-menu { display: block; justify-self: end; }.task-options { left: auto; right: 0; transform: none; }
-  .mobile-footer { display: flex; justify-content: center; }
 }
 @media (max-width: 580px) {
   header { grid-template-columns: 1fr auto; align-items: center; gap: 14px; padding: 12px 14px; min-height: 64px; }
   header .wordmark { font-size: 15px; gap: 8px; }header .mark { width: 18px; height: 18px; }
-  header .github-link span { display: none; }header .github-link { padding: 8px 0 8px 4px; }
   .task-menu summary { font-size: 11px; gap: 6px; padding: 9px 0; }.task-options { width: 180px; }
   main { padding-top: 100px; }.experiment { margin-top: 20px; }
 }
+
+main { padding-top: 24px; }
+.experiment { margin-top: 0; }
+.experiment-heading .task-menu { display: inline-block; position: relative; }
+.experiment-heading .task-menu summary { justify-content: flex-start; gap: 5px; padding: 0; color: inherit; white-space: normal; }
+.experiment-heading .task-menu summary:hover { color: #3275db; }
+.experiment-heading .task-menu summary svg { flex-shrink: 0; }
+.experiment-heading .task-options { z-index: 20; top: calc(100% + 12px); left: 0; right: auto; transform: none; width: 240px; max-width: calc(100vw - 80px); }
+
+.task-description { margin: 24px 0 28px; max-width: 900px; color: #657288; font-size: 13px; line-height: 1.8; }
+.task-description strong { color: #35445c; font-weight: 600; font-variant-numeric: tabular-nums; }

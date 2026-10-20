@@ -4,7 +4,6 @@ export type ExperimentTask = (typeof tasks)[number];
 export type ExperimentMode = ExperimentTask["modes"][number];
 export type GroupPosition = [number, number];
 
-const number = (value: number) => value.toLocaleString("en-US");
 const remaining = (count: number, total: number) => count === total ? "Full"
   : count === 0 ? "Deleted" : `${Math.round(count / total * 100)}% remaining`;
 
@@ -65,12 +64,10 @@ export function NeuronsMap({
       </svg>
     </div>
     <div className="map-key"><span className="layer-direction">Layers <Arrow /></span></div>
-    {showDetails && <div className="map-detail" aria-live="polite">
-      {activeGroup ? <><strong>Layer {layer + 1}/{data.layers} · Group {group + 1}/10</strong>
-        <span>{remaining(mode.remaining[layer][group], data.groups[layer][group].size)}</span>
-        <span>Mean importance {Math.round(data.groups[layer][group].percentile)}%</span>
-      </>
-        : <span>Model: Gemma 2 2B <b>–</b> {data.layers} layers, each with attention + MLP <b>–</b> {number(data.total / data.layers)} MLP neurons per layer, summarized in 10 groups of ~921 neurons</span>}
+    {showDetails && activeGroup && <div className="map-detail" aria-live="polite">
+      <strong>Layer {layer + 1}/{data.layers} · Group {group + 1}/10</strong>
+      <span>{remaining(mode.remaining[layer][group], data.groups[layer][group].size)}</span>
+      <span>Mean importance {Math.round(data.groups[layer][group].percentile)}%</span>
     </div>}
   </section>;
 }

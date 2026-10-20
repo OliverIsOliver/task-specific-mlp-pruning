@@ -21,6 +21,13 @@ function GitHubLink() {
       </a>;
 }
 
+const taskDescriptions: Record<string, string> = {
+  "Food orders": "The model turns food order transcript into a list of foods and quantities.",
+  "Appointments": "The model turn instructions into an appointment with the day, time, and room.",
+  "Policies": "The model decides whether an item can be returned based on a fake store policy.",
+  "Arithmetic": "The model adds a list of numbers and returns the final number.",
+};
+
 function App() {
   const datasetDialog = useRef<HTMLDialogElement>(null);
   const taskMenu = useRef<HTMLDetailsElement>(null);
@@ -41,7 +48,6 @@ function App() {
   const data = tasks[taskIndex];
   const modes = data.modes;
   const mode = modes[selected];
-  const delta = mode.correct - modes[0].correct;
   function chooseTask(i: number) {
     if (taskMenu.current) taskMenu.current.open = false;
     setTaskIndex(i);
@@ -57,30 +63,23 @@ function App() {
   }
 
   return <main>
-    <header>
-      <a className="wordmark" href="./"><span className="mark"><i /><i /><i /><i /></span>pruning</a>
-      <nav className="task-tabs" aria-label="Evaluation task">
-        {tasks.map((task, i) => <button key={task.title} aria-pressed={taskIndex === i}
-          onClick={() => chooseTask(i)}>{task.tab}</button>)}
-      </nav>
-      <details className="task-menu" ref={taskMenu}
-        onKeyDown={e => { if (e.key === "Escape" && taskMenu.current) { taskMenu.current.open = false; taskMenu.current.querySelector("summary")?.focus(); } }}
-        onBlur={e => { if (!e.currentTarget.contains(e.relatedTarget)) e.currentTarget.open = false; }}>
-        <summary aria-label={`Choose task: ${data.tab}`}>{data.tab}
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-        </summary>
-        <nav className="task-options" aria-label="Task choices">
-          {tasks.map((task, i) => <button key={task.title} aria-pressed={taskIndex === i} onClick={() => chooseTask(i)}>
-            {task.tab}<span aria-hidden="true">{taskIndex === i ? "✓" : ""}</span>
-          </button>)}
-        </nav>
-      </details>
-      <GitHubLink />
-    </header>
+
 
     <section className="experiment" aria-labelledby="experiment-title">
       <div className="experiment-heading">
-        <div><h1 id="experiment-title">{data.title}</h1>
+        <div>
+      <details className="task-menu" ref={taskMenu}
+        onKeyDown={e => { if (e.key === "Escape" && taskMenu.current) { taskMenu.current.open = false; taskMenu.current.querySelector("summary")?.focus(); } }}
+        onBlur={e => { if (!e.currentTarget.contains(e.relatedTarget)) e.currentTarget.open = false; }}>
+        <summary aria-label={`Choose task: ${data.title}`}><h1 id="experiment-title">{data.title}</h1>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+        </summary>
+        <nav className="task-options" aria-label="Task choices">
+          {tasks.map((task, i) => <button key={task.title} aria-pressed={taskIndex === i} onClick={() => chooseTask(i)}>
+            {task.title}<span aria-hidden="true">{taskIndex === i ? "✓" : ""}</span>
+          </button>)}
+        </nav>
+      </details>
           <div className="dataset-links">
             <a href={data.datasets.training} onClick={e => { e.preventDefault(); void openDataset(data.datasets.training, `${data.tab} · Training data`); }}>Training data <DownloadIcon /></a>
             <a href={data.datasets.testing} onClick={e => { e.preventDefault(); void openDataset(data.datasets.testing, `${data.tab} · Testing data`); }}>Testing data <DownloadIcon /></a>
@@ -91,23 +90,21 @@ function App() {
             onClick={() => setSelected(i)}>{item.label}</button>)}
         </div>
       </div>
-      <div className="stats" aria-label="Saved experiment results" aria-live="polite">
-        <div><span>MLP retained</span><strong>{100 - mode.cut}<small>%</small></strong></div>
-        <div><span>Neurons removed</span><strong>{number(mode.removed)}</strong>
-          <p>of {number(data.total)}</p></div>
-        <div><span>Correct answers</span><strong>{mode.correct}<small> / {data.samples.length}</small></strong>
-          <p>{selected === 0 ? "Full-model baseline" : `${delta > 0 ? "+" : ""}${delta} vs full model`}</p></div>
-      </div>
+      <p className="task-description">
+        {taskDescriptions[data.tab]} We use 50 training examples and their correct answers to rank MLP neurons by how much they activate and how sensitive the loss is using a Fisher approximation. Then we choose which combination of neurons to keep together out of a chosen percentage of neurons (e.g., 70%, 80%, or 90%) without changing the original model weights. Finaly, chosen neurons are removed from the MLP matrices. <span aria-live="polite">{mode.cut === 0
+          ? <>This is the original model, with <strong>0 of {number(data.total)} neurons removed</strong>.</>
+          : <>This version cuts <strong>{mode.cut}% of MLP neurons ({number(mode.removed)} of {number(data.total)})</strong>.</>} It answers <strong>{mode.correct} of {data.samples.length} tasks correctly</strong>{mode.cut === 0 ? "." : <>, compared with <strong>{modes[0].correct} of {data.samples.length}</strong> for the original model.</>}</span>
+      </p>
     </section>
 
-    <NeuronsMap data={data} mode={mode} selectedGroup={selectedGroup} hovered={hovered}
+    <NeuronsMap showDetails={false} data={data} mode={mode} selectedGroup={selectedGroup} hovered={hovered}
       onHoveredChange={setHovered} onSelectGroup={setSelectedGroup} />
 
     <TestCases data={data} mode={mode} index={index} previewIndex={previewIndex}
       onPreviewChange={setPreviewIndex} onSelect={setIndex} />
 
 
-    <footer className="mobile-footer"><GitHubLink /></footer>
+    <footer><GitHubLink /></footer>
 
     <dialog ref={datasetDialog} className="dataset-dialog" aria-labelledby="dataset-title">
       <form method="dialog"><h2 id="dataset-title">{dataset.label}</h2><button aria-label="Close dataset">×</button></form>

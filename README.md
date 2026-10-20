@@ -1,58 +1,56 @@
 # Task-specific MLP pruning on Gemma 2 2B
 
-This project’s goal is to find how many MLP channels can be removed for a task while keeping its accuracy. The Python / PyTorch pipeline ranks neurons by activation × downward sensitivity on a training set, then jointly learns which combination of neurons to keep across all 26 MLP layers for a chosen cut size. It removes the rest and checks performance on a separate testing set.
+This project’s goal is to find how many MLP neurons can be removed for a task while keeping its accuracy. The PyTorch pipeline ranks neurons by activation × downward sensitivity on a training set, then learns which combination of neurons to keep across all 26 MLP layers for a chosen percentage of neurons (e.g., 70%, 80%, or 90%). It removes the rest and checks performance on a separate testing set.
 
-[Interactive results](https://oliveramaher.github.io/task-specific-mlp-pruning/)
+[See in-depth results](https://oliveramaher.github.io/task-specific-mlp-pruning/)
 
 # Process
 
-https://github.com/user-attachments/assets/8cc2cf20-38d2-4f8a-88d3-99aea350fe3e
-
 ### 1. Measure how much each neuron affects training loss
 
-For each training example, feed Gemma the prompt and its correct answer. Then compute mean cross-entropy on the answer tokens, and backpropagate to the MLP activations immediately before each layer’s down projection. A **neuron’s activation** tells us its output strength. Its **gradient** tells us how sensitive the loss is to that activation. Multiply them, sum across tokens, square, and average across the training examples:
+For each training example, give Gemma the prompt and its correct answer. Compute the average loss on the answer tokens and calculate how sensitive that loss is to each MLP neuron's activation. A **neuron’s activation** tells us its output strength. Its **gradient** tells us how sensitive the loss is to that activation. Then calculate the importance score for each neuron using its activations and loss gradients:
 
 $$
 F_j = \frac{1}{2M}\sum_{i=1}^{M}\left(\sum_t a_{itj}\frac{\partial L_i}{\partial a_{itj}}\right)^2
 $$
 
-Here, $a_{itj}$ is neuron $j$’s activation at token $t$, $L_i$ is the training answer loss, and $M=50$. This is a **diagonal empirical Fisher approximation for neuron gates**: an initial estimate of loss sensitivity rather than a count of how often a neuron fires. A low score makes a neuron a candidate for removal; it does not prove that the neuron is unused. The next stage learns which combination of neurons to keep.
+Here, $a_{itj}$ is neuron $j$’s activation at token $t$, $L_i$ is the training answer loss, and $M=50$ for 50 training examples. This is a **diagonal empirical Fisher approximation** which estimates the loss sensitivity rather than counts how often a neuron fires. A low score makes a neuron more likely to remove, but it does not prove that the neuron is unused. The next stage learns which combination of neurons to keep.
 
-Implementation: [`src/fisher.py`](src/fisher.py).
+Code: [`src/fisher.py`](src/fisher.py).
 
 ### 2. Create the starting mask
 
-Flatten the scores across all 26 layers and select the lowest-scoring channels for removal. A 20% cut removes **47,923 of 239,616 MLP channels** globally. Individual layers lose different proportions.
+Use the scores across all 26 layers and select the lowest-scoring channels to remove. A 20% cut removes **47,923 of 239,616 MLP channels**. Individual layers lose different amounts.
 
-Fisher supplies the initial selection. During the forward pass, binary gates use **1 to keep a channel and 0 to remove its contribution**. The saved `removed` arrays use `True` for channels to delete.
+Fisher estimates are used to rank initally. Then each neuron recieved a gate, using **1 to keep a neuron and 0 to remove it**.
 
 ### 3. Learn a better selection at the same budget
 
-For a 20% cut, the optimizer can change **which** 47,923 neurons are removed, but it must always remove 47,923. It learns this selection from the training answers.
+For a 20% cut, the optimizer can change **which** 47,923 neurons are removed, but it must always remove 47,923. It learns which to select from the training answers.
 
-Give every channel a trainable gate score, initialized in Fisher-ranking order. On each forward pass, keep the highest-scoring channels and mask the rest. After backpropagation, update the scores and select the mask again, but **original model weights are always frozen**.
+Give every neuron a trainable gate score, initialized by the Fisher-ranking order. On each pass, keep the highest-scoring channels and mask the rest. After backpropagation, update the scores and create a new mask, but **original model weights are always frozen**.
 
-The forward gates are binary. A **straight-through estimator** supplies sigmoid gradients during backpropagation, including for masked channels. That lets the optimizer restore initially removed neurons and remove different ones while keeping the total removal count fixed.
+Normally, removing a neuron means the model cannot learning whether it should be kept instead. A **straight-through estimator** calculates how useful each neuron would be, even if it is currently removed. That lets the optimizer restore initially removed neurons and remove other ones while keeping the total count the same.
 
-Implementation: [`src/masks.py`](src/masks.py).
+Code: [`src/masks.py`](src/masks.py).
 
 ### 4. Slice the matrices, then test the smaller model
 
-For each mask, load the original weights and physically slice the MLP matrices: remove the selected rows from the gate and up projections, and the matching columns from the down projection. The surviving weights keep their original values; attention, embeddings, and the output head stay unchanged. Each cut level starts from the original weights and its own mask.
+For each mask, use the original weights and physically cut the MLP matrices, removing the selected rows and columns. The remaining weights don't change, as well as attention, embeddings, and the output head.
 
-Run the resulting smaller model on the same 100 held-out prompts per task using greedy decoding, then grade its answers. Food orders are compared as food/quantity pairs regardless of item order; appointment and policy outputs are checked for matching JSON fields, values, and types; addition must exactly match the expected integer. These grading rules are used only for evaluation, not mask training.
+Run the resulting smaller model on the same 100 held-out prompts per task and then grade the answers. Food orders are compared to food/quantity pairs regardless of order, appointment and policy outputs are compared to matching JSONs, and addition is compared to the exact number.
 
-Implementation: [`src/model.py`](src/model.py), [`src/generation.py`](src/generation.py), and [`src/evaluation.py`](src/evaluation.py).
+Code: [`src/model.py`](src/model.py), [`src/generation.py`](src/generation.py), and [`src/evaluation.py`](src/evaluation.py).
 
 # Results
 
 ![Task accuracy by percentage of MLP neurons cut](assets/task-accuracy.png)
 
-The chart shows exact-match accuracy on 100 held-out examples per task, comparing the original model with masks that remove 10%, 20%, or 30% of MLP channels. Accuracy varies by task: food-order extraction and return-policy decisions score highest at a 30% cut, appointment scheduling stays nearly flat, and integer addition is highest at a 10% cut. These are results on these four test sets; they do not establish that pruning improves performance in general.
+The chart shows accuracy on testing sets for each task, comparing the original model with pruned models that remove 10%, 20%, or 30% of MLP channels. Food-order extraction and return-policy decisions score highest at a 30% cut, appointment scheduling stays nearly flat, and integer addition is highest at a 10% cut. These results are for these four specific test sets and does not show that pruning improves general performance.
 
 # Run
 
-Use Python 3.13 to match the saved experiments. Accept the [Gemma model license](https://huggingface.co/google/gemma-2-2b) and sign in to Hugging Face before downloading its weights.
+Use Python 3.13 to exactly match the results. Accept the [Gemma model license](https://huggingface.co/google/gemma-2-2b) and sign in to Hugging Face before downloading weights.
 
 ```bash
 python3.13 -m venv .venv
@@ -61,25 +59,25 @@ pip install -r requirements.txt
 hf auth login
 ```
 
-Check the saved masks and all 1,600 responses without loading the model:
+See the saved masks and all responses without loading the model:
 
 ```bash
 python verify.py
 python -m unittest discover -s tests
 ```
 
-Evaluate the saved food-order masks, or recompute Fisher scores and learn new masks from its 50 training examples:
+Test the saved food-order masks, or recalculate Fisher scores and create new masks from the 50 training examples:
 
 ```bash
 python run.py --tasks food --cuts 0 10 20 30
 python run.py --tasks food --cuts 10 20 30 --fit --output runs/refit
 ```
 
-The other task names are `appointments`, `returns`, and `addition`. Omitting `--tasks` runs all four. Generated files go into `runs/`; packaged masks and results stay in `masks/` and `results/`.
+The other task names are `appointments`, `returns`, and `addition`. Excluding `--tasks` runs all of them. Files will go to `runs/`, and the masks and results stay inside of `masks/` and `results/`.
 
 # Results website
 
-The React / TypeScript site displays the saved masks and responses; browsing it requires no model or Python server. Use Node.js 22.12 or newer:
+The site displays the saved masks and responses; browsing it requires no model or Python server. Use Node.js 22.12 or newer:
 
 ```bash
 cd visualization
