@@ -77,7 +77,7 @@ The other task names are `appointments`, `returns`, and `addition`. Excluding `-
 
 # Results website
 
-The site displays the saved masks and responses; browsing it requires no model or Python server. Use Node.js 22.12 or newer:
+The site shows the saved masks and responses, so viewing it requires no model or Python server. Use Node.js 22.12 or newer:
 
 ```bash
 cd visualization
@@ -85,6 +85,4 @@ npm ci
 npm run dev
 ```
 
-`npm run build` produces the static site in `visualization/dist/`. To regenerate the site's cached data from this repository's datasets, masks, and results, run `python visualization/export.py` from the repository root with NumPy installed.
-
-For GitHub Pages, select **Settings → Pages → Source → GitHub Actions**. The included [workflow](.github/workflows/pages.yml) builds and publishes the site on pushes to `main`, or when run manually. The site will be available at `https://oliveramaher.github.io/task-specific-mlp-pruning/` after deployment.
+`npm run build` makes the static site in `visualization/dist/`. To rebuild the site's svaed data from the repo's datasets, masks, and results, run `python visualization/export.py` from the repo root with NumPy.
