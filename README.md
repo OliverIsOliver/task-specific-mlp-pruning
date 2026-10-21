@@ -2,8 +2,6 @@
 
 This project’s goal is to find how many MLP neurons can be removed for a task while keeping its accuracy. The PyTorch pipeline ranks neurons by activation × downward sensitivity on a training set, then learns which combination of neurons to keep across all 26 MLP layers for a chosen percentage of neurons (e.g., 70%, 80%, or 90%). Lastly, it removes the rest of the neurons and checks performance on a separate testing set.
 
-[See in-depth results](https://oliveramaher.github.io/task-specific-mlp-pruning)
-
 # Process
 
 ### 1. Measure how much each neuron affects training loss
